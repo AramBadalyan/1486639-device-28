@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Арам Бадалян](https://up.htmlacademy.ru/htmlcss/28/user/1486639).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/nikita_rogatnev).
 
 ---
 
