@@ -1,86 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
 
-    <header>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <a>
+      <img src="img/logo.svg" alt="Лого магазина DEVICE">
+    </a>
+    <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
+      <label for="search_box">Поиск по сайту</label>
+      <input type="search" name="search_box" placeholder="Поиск по сайту">
+    </form>
+    <div class="authorization">
+      <a href="#">Войти</a>
+    </div>
+    <div class="cart-links">
+      <a href="#">Сравнить</a>
+      <a href="#">Корзина</a>
+    </div>
+    <nav>
+      <a href="catalog.html">Каталог товаров</a>
+      <a href="#">Доставка</a>
+      <a href="#">Гарантия</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Магазин цифровой техники DEVICE</h1>
+
+    <section class="about-us">
+      <h2>О нас</h2>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
+        компаниями:</p>
+      <ul>
+        <li>Деловые линии</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a href="#">Подробнее о нас</a>
+    </section>
+
+    <section class="contacts">
+      <h2>Контакты</h2>
+      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
+        бывает.</p>
       <a href="#">
-        <img src="img/-e-logo.svg" alt="Лого магазина DEVICE">
-      </a>
-      <div class="search">
-        <label for="search_box">Поиск по сайту</label>
-        <input type="text" name="search_box" placeholder="Поиск по сайту">
-      </div>
-      <div>
-        <a href="">Войти</a>
-        <a href="">Сравнить</a>
-        <a href="">Корзина</a>
-      </div>
-      <nav>
-        <a href="catalog.html">Каталог товаров</a>
-        <a href="">Доставка</a>
-        <a href="">Гарантия</a>
-        <a href="">Контакты</a>
-      </nav>
-    </header>
+        <img src="https://via.placeholder.com/560x222" alt="Наше местоположение" width="560" height="222">
+      </a><br>
+      <a href="#">Напишите нам</a>
+    </section>
 
-    <main>
-      <h1>Магазин цифровой техники DEVICE</h1>
+  </main>
 
-      <section>
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul>
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <button>Подробнее о нас</button>
-      </section>
+  <footer class="footer">
 
-      <section>
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img src="https://via.placeholder.com/560x222" alt="Наше местоположение" width="560" height="222"><br>
-        <button>Напишите нам</button>
-      </section>
+    <div class="authorization">
+      <a href="#">Войти</a>
+    </div>
+    <div class="cart-links">
+      <a href="#">Сравнить</a>
+      <a href="#">Корзина</a>
+    </div>
 
-    </main>
+    <a>
+      <img src="img/logo.svg" alt="Лого магазина DEVICE">
+    </a>
 
-    <footer>
+    <address>г. Москва, ул. Строителей, 15</address>
+    <address>Тел.: +7 (495) 495-95-95</address>
 
-      <div>
-        <a href="">Войти</a>
-        <a href="">Сравнить</a>
-        <a href="">Корзина</a>
-      </div>
+    <nav>
+      <a href="#">Доставка</a>
+      <a href="#">Контакты</a>
+      <a href="#">Гарантия</a>
+    </nav>
 
-      <a>
-        <img src="img/-e-logo.svg" alt="Лого магазина DEVICE">
-      </a>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
 
-      <address>г. Москва, ул. Строителей, 15</address>
-      <address>Тел.: +7 (495) 495-95-95</address>
-      
-      <nav>
-        <a href="">Доставка</a>
-        <a href="">Контакты</a>
-        <a href="">Гарантия</a>
-      </nav>
-      
-      <div>
-        <a href="">Facebook</a>
-        <a href="">Instagram</a>
-        <a href="">Twitter</a>
-      </div>
-
+    <div class="htmlacademy">
       <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+    </div>
 
-    </footer>
+  </footer>
 
-  </body>
+</body>
+
 </html>
