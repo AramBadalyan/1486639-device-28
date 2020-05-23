@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Девайс</title>
+  <title>Моноподы для селфи</title>
 </head>
 
 <body>
@@ -13,8 +13,12 @@
       <a href="index.html"><img src="img/design/logo.svg" alt="Лого магазина DEVICE"></a>
     </div>
     <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
-      <label for="search-box">Поиск по сайту</label>
-      <input type="search" id="search-box" placeholder="Поиск по сайту">
+      <label for="search-box">
+        <button type="submit" class="search-button">
+          Поиск по сайту
+        </button>
+      </label>
+      <input type="search" name="search-box" id="search-box" placeholder="Поиск по сайту">
     </form>
     <div class="authorization">
       <a href="#">Войти</a>
@@ -33,15 +37,25 @@
         <li><a href="#">Контакты</a></li>
       </ul>
     </div>
+    <div class="catalog-menu visually-hidden">
+      <ul>
+        <li><a href="#">Виртуальная реальность</a></li>
+        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a href="#">Экшн-камеры</a></li>
+        <li><a href="#">Фитнес-браслеты</a></li>
+        <li><a href="#">Умные часы</a></li>
+        <li><a href="#">Квадрокоптер</a></li>
+      </ul>
+    </div>
   </header>
 
   <main>
-    <h1>Моноподы для селфи</h1>
+    <h1 class="visually-hidden">Моноподы для селфи</h1>
     <div class="page-track">
       <ul>
         <li><a href="index.html">Главная</a></li>
         <li><a>Каталог товаров</a></li>
-        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a>Моноподы для селфи</a></li>
       </ul>
     </div>
 
@@ -81,7 +95,9 @@
             Нет
           </label>
         </fieldset>
-        <input type="submit" value="Показать">
+        <button type="submit" class="button">
+          Показать
+        </button>
       </form>
     </aside>
 
@@ -89,21 +105,21 @@
       <ul>
         <li>
           <article>
-            <img src="img/content/item-1.jpg" alt="Любительская лфи палка" width="360" height="380">
+            <img src="img/content/item-1.jpg" alt="Любительская селфи палка" width="360" height="380">
             <h2><a href="#">Любительская селфи палка</a></h2> <!-- h1 уже в заголовке-->
             <span>500 руб.</span>
           </article>
         </li>
         <li>
           <article>
-            <img src="img/content/item-2.jpg" alt="Профессиональная лфи-палка" width="360" height="380">
+            <img src="img/content/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
             <h2><a href="#">Профессиональная селфи-палка</a></h2>
             <span>1500 руб.</span>
           </article>
         </li>
         <li>
           <article>
-            <img src="img/content/item-3.jpg" alt="Непотопляемая лфи-палка" width="360" height="380">
+            <img src="img/content/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
             <h2><a href="#">Непотопляемая селфи-палка</a></h2>
             <span>2500 руб.</span>
           </article>

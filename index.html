@@ -13,8 +13,12 @@
       <a><img src="img/design/logo.svg" alt="Лого магазина DEVICE"></a>
     </div>
     <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
-      <label for="search-box">Поиск по сайту</label>
-      <input type="search" id="search-box" placeholder="Поиск по сайту">
+      <label for="search-box">
+        <button type="submit" class="search-button">
+          Поиск по сайту
+        </button>
+      </label>
+      <input type="search" name="search-box" id="search-box" placeholder="Поиск по сайту">
     </form>
     <div class="authorization">
       <a href="#">Войти</a>
@@ -33,11 +37,20 @@
         <li><a href="#">Контакты</a></li>
       </ul>
     </div>
+    <div class="catalog-menu visually-hidden">
+      <ul>
+        <li><a href="#">Виртуальная реальность</a></li>
+        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a href="#">Экшн-камеры</a></li>
+        <li><a href="#">Фитнес-браслеты</a></li>
+        <li><a href="#">Умные часы</a></li>
+        <li><a href="#">Квадрокоптер</a></li>
+      </ul>
+    </div>
   </header>
 
   <main>
-    <h1>Магазин цифровой техники DEVICE</h1>
-
+    <h1 class="visually-hidden">Магазин цифровой техники DEVICE</h1>
     <section class="about-us">
       <h2>О нас</h2>
       <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -103,6 +116,36 @@
     </div>
 
   </footer>
+
+  <section class="contact-form" aria-label="Форма обратной связи">
+    <button type="button" class="close-button">
+      Закрыть форму
+    </button>
+    <form action="https://echo.htmlacademy.ru/" method="POST">
+      <label for="name-field">
+        Ваше имя:
+        <input type="text" id="name-field" name="name" placeholder="Имя Фамилия">
+      </label>
+      <label for="email-field">
+        Ваш e-mail:
+        <input type="email" id="email-field" name="email" placeholder="email@example.com">
+      </label>
+      <label for="message-field">
+        Текст письма:
+        <input type="textarea" id="message-field" name="message" placeholder="В свободной форме">
+      </label>
+      <button type="submit" class="button send-message">
+        Отправить
+      </button>
+    </form>
+  </section>
+
+  <section class="map" aria-label="Мы на карте">
+    <button type="button" class="close-button">
+      Закрыть карту
+    </button>
+    <img src="img/content/map-big.png" width="994" height="593" alt="Нашие местоположение">
+  </section>
 
 </body>
 
