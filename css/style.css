@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy';
     src: url('../fonts/web/gilroyextrabold.woff2'),
          url('../fonts/web/gilroyextrabold.woff');
     font-style: normal;
@@ -41,7 +41,7 @@ body {
 }
 
 img {
-    max-width: 100;
+    max-width: 100%;
     height: auto;
 }
 
@@ -64,7 +64,7 @@ a:focus, a:hover, a:active {
 
 /* Header */
 .link-line {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, sans-serif;
     font-style: normal;
     font-size: 15px;
     line-height: 20px;
@@ -75,7 +75,8 @@ a:focus, a:hover, a:active {
 }
 
 .navigation li {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
@@ -83,7 +84,7 @@ a:focus, a:hover, a:active {
 }
 
 .catalog-menu li {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, sans-serif;
     font-style: normal;
     font-size: 15px;
     line-height: 20px;
@@ -92,56 +93,61 @@ a:focus, a:hover, a:active {
 
 /* Main */
 main h1 {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
     font-size: 47px;
     line-height: 58px;
-    color: inherit;;   
+    color: inherit;   
 }
 
 .index-columns h2 {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
     font-size: 47px;
     line-height: 58px;
-    color: inherit;;
+    color: inherit;
 }
 
 .index-columns p {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 15px;
     line-height: 28px;
-    color: inherit;;
+    color: inherit;
 }
 
 .index-columns a {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
 }
 
 .about-us li {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
     font-size: 16px;
     line-height: 28px;
-    color: inherit;;
+    color: inherit;
 }
 
 .breadcrumbs {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
     line-height: 19px;
-    color: inherit;;
+    color: inherit;
 }
 
 .filter legend {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
     font-size: 14px;
     line-height: 17px;
 }
 
 .filter label {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -149,24 +155,26 @@ main h1 {
 }
 
 .filter button {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
 }
 
 .goods h2 {
-    font-family: 'Gilroy Bold';
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
     font-size: 18px;
     line-height: 22px;
-    color: inherit;;
+    color: inherit;
 }
 
 .goods span {
-    font-family: 'Gilroy';
+    font-family: 'Gilroy', Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
-    color: inherit;;
+    color: inherit;
 }
 
 .goods ul {
@@ -177,7 +185,7 @@ main h1 {
 .footer {
     background-color: var(--basic-dark);
     color: var(--basic-white);
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
