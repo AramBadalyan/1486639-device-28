@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Моноподы для селфи</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -12,22 +15,24 @@
     <div class="logo">
       <a href="index.html"><img src="img/design/logo.svg" alt="Лого магазина DEVICE"></a>
     </div>
-    <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
-      <label for="search-box">
-        <button type="submit" class="search-button"> <!-- Для отправки поискового запроса -->
-          Поиск по сайту
-        </button>
-      </label>
-      <input type="search" name="search-box" id="search-box" placeholder="Поиск по сайту">
-    </form>
-    <div class="authorization">
-      <a href="#">Войти</a>
-    </div>
-    <div class="cart-links">
-      <ul>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
-      </ul>
+    <div class="link-line">
+      <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
+        <label for="search-box">
+          <button type="submit" class="search-button"> <!-- Для отправки поискового запроса -->
+            Поиск по сайту
+          </button>
+        </label>
+        <input type="search" name="search-box" id="search-box" placeholder="Поиск по сайту">
+      </form>
+      <div class="authorization">
+        <a href="#">Войти</a>
+      </div>
+      <div class="cart-links">
+        <ul>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+      </div>
     </div>
     <div class="navigation">
       <ul>
@@ -50,8 +55,8 @@
   </header>
 
   <main>
-    <h1 class="visually-hidden">Моноподы для селфи</h1>
-    <div class="page-track">
+    <h1>Моноподы для селфи</h1>
+    <div class="breadcrumbs">
       <ul>
         <li><a href="index.html">Главная</a></li>
         <li><a>Каталог товаров</a></li>
@@ -137,14 +142,16 @@
 
   <footer class="footer">
 
-    <div class="authorization">
-      <a href="#">Войти</a>
-    </div>
-    <div class="cart-links">
-      <ul>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
-      </ul>
+    <div class="link-line">
+      <div class="authorization">
+        <a href="#">Войти</a>
+      </div>
+      <div class="cart-links">
+        <ul>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="logo">
