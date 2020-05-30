@@ -18,7 +18,8 @@
     <div class="link-line">
       <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
         <label for="search-box">
-          <button type="submit" class="search-button"> <!-- Для отправки поискового запроса -->
+          <button type="submit" class="search-button">
+            <!-- Для отправки поискового запроса -->
             Поиск по сайту
           </button>
         </label>
@@ -35,7 +36,7 @@
       </div>
     </div>
     <div class="navigation">
-      <ul>
+      <ul class="nav-flex">
         <li><a href="catalog.html">Каталог товаров</a></li>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
@@ -57,6 +58,46 @@
   <main class="content">
     <h1 class="content-title visually-hidden">Магазин цифровой техники DEVICE</h1>
 
+    <section class="popular">
+      <h2 class="visually-hidden">Популярные разделы</h2>
+      <ul class="category">
+        <li><a href="#">
+            <div class="icon-background"><img src="img/design/vr.svg"></div>
+            Виртуальная реальность
+          </a></li>
+        <li><a href="catalog.html">
+            <div class="icon-background"><img src="img/design/monopod.svg"></div>
+            Моноподы для селфи
+          </a></li>
+        <li><a href="#">
+            <div class="icon-background"><img src="img/design/action-cam.svg"></div>
+            Экшн-камеры
+          </a></li>
+        <li><a href="#">
+            <div class="icon-background"><img src="img/design/fitness.svg"></div>
+            Фитнес-браслеты
+          </a></li>
+        <li><a href="#">
+            <div class="icon-background"><img src="img/design/watch.svg"></div>
+            Умные часы
+          </a></li>
+        <li><a href="#">
+            <div class="icon-background"><img src="img/design/copter.svg"></div>
+            Квадрокоптеры
+          </a></li>
+      </ul>
+    </section>
+
+    <section class="partners">
+      <h2 class="visually-hidden">Наши партнеры</h2>
+      <ul class="partners-list">
+        <li><img src="img/content/p-dji.png" alt="DJI"></li>
+        <li><img src="img/content/p-spgadgets.png" alt="SPGadgets"></li>
+        <li><img src="img/content/p-gopro.png" alt="GoPro"></li>
+        <li><img src="img/content/p-vive.png" alt="VIVE"></li>
+      </ul>
+    </section>
+
     <div class="index-columns">
       <section class="about-us">
         <h2 class="section-title">О нас</h2>
@@ -73,7 +114,8 @@
 
       <section class="contacts">
         <h2 class="section-title">Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
+          Всякое
           бывает.</p>
         <a href="#">
           <img src="img/content/map.png" alt="Наше местоположение" width="560" height="222">
@@ -85,46 +127,54 @@
   </main>
 
   <footer class="footer">
+    <div class="content">
 
-    <div class="link-line">
-      <div class="authorization">
-        <a href="#">Войти</a>
+      <div class="footer-links">
+        <div class="authorization">
+          <a href="#">Войти</a>
+        </div>
+        <div class="cart-links">
+          <ul>
+            <li><a href="#">Сравнить</a></li>
+            <li><a href="#">Корзина</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="cart-links">
-        <ul>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
+
+      <div class="logo">
+        <a><img src="img/design/logo.svg" alt="Лого магазина DEVICE"></a>
+      </div>
+
+      <div class="footer-columns">
+        <address>г. Москва, ул. Строителей, 15</address>
+        <div class="phone">
+          <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        </div>
+
+        <div class="footer-navigation">
+          <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-rect">
+        </div>
+
+        <div class="socials">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+
+        <div class="htmlacademy">
+          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        </div>
       </div>
     </div>
-
-    <div class="logo">
-      <a><img src="img/design/logo.svg" alt="Лого магазина DEVICE"></a>
-    </div>
-
-    <address>г. Москва, ул. Строителей, 15</address>
-    <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-
-    <div class="navigation">
-      <ul>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </div>
-
-    <div class="socials">
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
-      </ul>
-    </div>
-
-    <div class="htmlacademy">
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-    </div>
-
   </footer>
 
   <section class="contact-form" aria-label="Форма обратной связи">

@@ -54,7 +54,7 @@
     </div>
   </header>
 
-  <main class="content">
+  <main class="content catalog">
     <h1 class="content-title">Моноподы для селфи</h1>
     <div class="breadcrumbs">
       <ul>
@@ -64,123 +64,133 @@
       </ul>
     </div>
 
-    <aside class="filter">
-      <form action="https://echo.htmlacademy.ru/" method="GET">
-        <fieldset>
-          <legend>Цвет</legend>
-          <label for="color-black">
-            <input type="checkbox" id="color-black" name="black" checked>
-            Черный
-          </label>
-          <label for="color-white">
-            <input type="checkbox" id="color-white" name="white">
-            Белый
-          </label>
-          <label for="color-blue">
-            <input type="checkbox" id="color-blue" name="blue" checked>
-            Синий
-          </label>
-          <label for="color-red">
-            <input type="checkbox" id="color-red" name="red" checked>
-            Красный
-          </label>
-          <label for="color-pink">
-            <input type="checkbox" id="color-pink" name="pink">
-            Розовый
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Bluetooth</legend>
-          <label>
-            <input type="radio" name="bluetooth" value="true" checked>
-            Есть
-          </label>
-          <label>
-            <input type="radio" name="bluetooth" value="false">
-            Нет
-          </label>
-        </fieldset>
-        <button type="submit" class="button">
-          Показать
-        </button>
-      </form>
-    </aside>
-
-    <section class="goods">
-      <ul>
-        <li>
-          <article>
-            <img src="img/content/item-1.jpg" alt="Любительская селфи палка" width="360" height="380">
-            <h2 class="item-title"><a href="#">Любительская селфи палка</a></h2> <!-- h1 уже в заголовке-->
-            <span>500 руб.</span>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="img/content/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
-            <h2 class="item-title"><a href="#">Профессиональная селфи-палка</a></h2>
-            <span>1500 руб.</span>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="img/content/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
-            <h2 class="item-title"><a href="#">Непотопляемая селфи-палка</a></h2>
-            <span>2500 руб.</span>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="img/content/item-4.jpg" alt="Селфи-палка ледуй за мной»" width="360" height="380">
-            <h2 class="item-title"><a href="#">Селфи-палка «Следуй за мной»</a></h2>
-            <span>4900 руб.</span>
-          </article>
-        </li>
-      </ul>
-    </section>
+    <div class="catalog-columns">
+      <aside class="filter">
+        <form action="https://echo.htmlacademy.ru/" method="GET">
+          <fieldset>
+            <legend>Цвет</legend>
+            <label for="color-black">
+              <input type="checkbox" id="color-black" name="black" checked>
+              Черный
+            </label>
+            <label for="color-white">
+              <input type="checkbox" id="color-white" name="white">
+              Белый
+            </label>
+            <label for="color-blue">
+              <input type="checkbox" id="color-blue" name="blue" checked>
+              Синий
+            </label>
+            <label for="color-red">
+              <input type="checkbox" id="color-red" name="red" checked>
+              Красный
+            </label>
+            <label for="color-pink">
+              <input type="checkbox" id="color-pink" name="pink">
+              Розовый
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <label>
+              <input type="radio" name="bluetooth" value="true" checked>
+              Есть
+            </label>
+            <label>
+              <input type="radio" name="bluetooth" value="false">
+              Нет
+            </label>
+          </fieldset>
+          <button type="submit" class="button">
+            Показать
+          </button>
+        </form>
+      </aside>
+    
+      <section class="goods">
+        <ul>
+          <li>
+            <article class="item">
+              <img src="img/content/item-1.jpg" alt="Любительская селфи палка" width="360" height="380">
+              <h2 class="item-title"><a href="#">Любительская селфи палка</a></h2> <!-- h1 уже в заголовке-->
+              <span>500 руб.</span>
+            </article>
+          </li>
+          <li>
+            <article class="item">
+              <img src="img/content/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+              <h2 class="item-title"><a href="#">Профессиональная селфи-палка</a></h2>
+              <span>1500 руб.</span>
+            </article>
+          </li>
+          <li>
+            <article class="item">
+              <img src="img/content/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+              <h2 class="item-title"><a href="#">Непотопляемая селфи-палка</a></h2>
+              <span>2500 руб.</span>
+            </article>
+          </li>
+          <li>
+            <article class="item">
+              <img src="img/content/item-4.jpg" alt="Селфи-палка ледуй за мной»" width="360" height="380">
+              <h2 class="item-title"><a href="#">Селфи-палка «Следуй за мной»</a></h2>
+              <span>4900 руб.</span>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
-
-    <div class="link-line">
-      <div class="authorization">
-        <a href="#">Войти</a>
+    <div class="content">
+  
+      <div class="footer-links">
+        <div class="authorization">
+          <a href="#">Войти</a>
+        </div>
+        <div class="cart-links">
+          <ul>
+            <li><a href="#">Сравнить</a></li>
+            <li><a href="#">Корзина</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="cart-links">
-        <ul>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
+  
+      <div class="logo">
+        <a href="index.html"><img src="img/design/logo.svg" alt="Лого магазина DEVICE"></a>
+      </div>
+      
+      <div class="footer-columns">
+        <address>г. Москва, ул. Строителей, 15</address>
+        <div class="phone">
+          <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        </div>
+    
+        <div class="footer-navigation">
+          <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-rect">
+        </div>
+    
+        <div class="socials">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+    
+        <div class="htmlacademy">
+          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        </div>
       </div>
     </div>
-
-    <div class="logo">
-      <a href="index.html"><img src="img/design/logo.svg" alt="Лого магазина DEVICE"></a>
-    </div>
-
-    <address>г. Москва, ул. Строителей, 15</address>
-    <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-
-    <div class="navigation">
-      <ul>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </div>
-
-    <div class="socials">
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
-      </ul>
-    </div>
-
-    <div class="htmlacademy">
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-    </div>
-
   </footer>
 
 </body>
