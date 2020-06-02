@@ -37,6 +37,7 @@
 }
 
 .page-body {
+    font-family: 'Gilroy', Arial, sans-serif;
     min-height: 100%;
     min-width: 1180px;
     margin: 0;
@@ -79,16 +80,18 @@ a:focus, a:hover, a:active {
 }
 
 .header {
-    width: 1040px;
-    margin: 0 auto;
-    margin-bottom: 44px;
+    width: 1160px;
+    padding: 0px 60px;
+    padding-bottom: 120px;
+    margin: 40px auto;
 
-    background-color: var(--special-yellow-light); /* Заглушка вместо прямоугольника */ 
+    background-color: var(--special-yellow-light);
 }
 
-.logo {
-    margin-top: 20px;
-    margin-bottom: 29px;
+.header .logo {
+    position: absolute;
+    padding: 20px 0;
+    margin-top: -40px;
 }
 
 .link-line {
@@ -96,7 +99,9 @@ a:focus, a:hover, a:active {
     font-style: normal;
     font-size: 15px;
     line-height: 20px;
-    margin-bottom: 50px;
+    margin: 0;
+    padding-top: 44px;
+    padding-bottom: 20px;
 
     width: auto;
     display: flex;
@@ -138,8 +143,7 @@ a:focus, a:hover, a:active {
 .navigation {
     width: 100%;
     margin: 0;
-    padding: 0;
-    border: 0;
+    padding: 20px 0;
 }
 
 .navigation ul {
@@ -164,14 +168,21 @@ a:focus, a:hover, a:active {
     margin-left: auto;
 }
 
-.navigation li,
-.footer-navigation li {
-    font-family: 'Gilroy', Arial, sans-serif;
+.navigation li {
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
     list-style: none;
+}
+
+.catalog-menu {
+    display: none;
+}
+
+.catalog-menu ul {
+    margin: 0;
+    padding: 0;
 }
 
 .catalog-menu li {
@@ -184,13 +195,12 @@ a:focus, a:hover, a:active {
 
 /* Main */
 .content {
-    width: 1160px;
+    width: 1180px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
 .content-title {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-weight: 800;
     font-size: 47px;
     line-height: 58px;
@@ -201,21 +211,111 @@ a:focus, a:hover, a:active {
 }
 
 .section-title {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-weight: 800;
     font-size: 47px;
     line-height: 58px;
     color: inherit;
 
-    margin: 50 0;
-    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+/* Основной слайдер */
+.slide {
+    width: 1180px;
+    min-height: 520px;
+    padding-right: 60px;
+    margin-top: -195px;
+
+    display: grid;
+    grid-template-columns: 600px 1fr;
+}
+
+.details {
+    position: absolute;
+}
+
+.switched1:not(:checked) ~ .slide1 {
+    display: none;
+}
+
+.switched2:not(:checked) ~ .slide2 {
+    display: none;
+}
+.switched3:not(:checked) ~ .slide3 {
+    display: none;
+}
+
+.slide img {
+    margin: auto;
+}
+
+.specification {
+    display: flex;
+    flex-direction: column;
+}
+
+.specification h2 {
+    font-weight: 800;
+    font-size: 47px;
+    line-height: 58px;
+    margin: 0;
+    margin-top: -95px;
+}
+
+.specification p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.slider-number {
+    font-weight: 800;
+    font-size: 179px;
+    line-height: 190px;
+    color: var(--basic-white);
+
+    align-self: flex-end;
+    order: -1;
+}
+
+.features {
+    margin-top: auto;
+    display: flex;
+}
+
+.features span {
+    display: block;
+}
+
+.feature {
+    padding-right: 50px;
+}
+
+.feature-value {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.feature-type {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+/* Популярные разделы магазина */
+.popular {
+    padding: 50px 0;
+    margin: 0;
 }
 
 .category {
     list-style: none;
-    padding: 20px 0;
-    margin-top: 76px;
-    margin-bottom: 50px;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -230,24 +330,53 @@ a:focus, a:hover, a:active {
     height: 160px;
     margin-bottom: 38px;
 
-    /* display: grid;
-    justify-content: center;
-    align-items: center; */
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .category a {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-weight: 800;
     font-style: 18px;
     line-height: 22px;
 }
 
+/* Услуги */
+.service-list {
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 285px 1fr;
+}
+
+.service-switch {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-switch li {
+    margin-bottom: 30px;
+}
+
+.warranty,
+.credit {
+    display: none;
+}
+
+/* Наши партнеры */
+.partners {
+    padding: 50px 0;
+    margin: 0;
+}
+
 .partners-list {
     list-style: none;
     padding: 0;
-    margin: 90px 0;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 40;
@@ -257,9 +386,26 @@ a:focus, a:hover, a:active {
     width: 260px;
 }
 
+.partners-list img:not(:hover) {
+    filter: grayscale(100%);
+    opacity: 20%;
+}
+
+/* О нас и Контакты */
+
 .index-columns {
+    padding: 30px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+/* .index-columns > div {
+    display: flex;
+    flex-direction: column;
+} */
+
+.index-columns a {
+    margin-top: auto;
 }
 
 .index-columns p {
@@ -273,11 +419,14 @@ a:focus, a:hover, a:active {
 }
 
 .index-columns a {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
+}
+
+.index-columns .rectangle {
+    margin-bottom: 50px;
 }
 
 .about-us {
@@ -290,7 +439,6 @@ a:focus, a:hover, a:active {
 }
 
 .about-us li {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 28px;
@@ -304,6 +452,7 @@ a:focus, a:hover, a:active {
     height: 222px;
 }
 
+/* Страницы каталога */
 .catalog {
     padding: 0;
     padding-left: 60px;
@@ -351,7 +500,6 @@ a:focus, a:hover, a:active {
 }
 
 .filter legend {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-weight: 800;
     font-size: 14px;
     line-height: 17px;
@@ -372,7 +520,6 @@ a:focus, a:hover, a:active {
 }
 
 .filter button {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
@@ -380,7 +527,6 @@ a:focus, a:hover, a:active {
 }
 
 .item-title {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
@@ -388,7 +534,6 @@ a:focus, a:hover, a:active {
 }
 
 .goods span {
-    font-family: 'Gilroy', Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
     color: inherit;
@@ -419,8 +564,7 @@ a:focus, a:hover, a:active {
     font-weight: 300;
     font-size: 15px;
     line-height: 20px;
-
-    margin-top: 86px;
+    padding-bottom: 65px;
 }
 
 .footer-links {
@@ -429,7 +573,7 @@ a:focus, a:hover, a:active {
     flex-direction: row;
     justify-content: end;
 
-    margin-top: 46px;
+    padding-top: 46px;
 }
 
 .footer-links .authorization {
@@ -442,20 +586,15 @@ a:focus, a:hover, a:active {
 }
 
 .footer .logo {
-    margin-bottom: 40px;
+    padding-bottom: 20px;
 }
 
-.footer-columns {
+.footer-contacts {
     display: grid;
     grid-template-columns: 300px 1fr 300px;
 }
 
-.footer-columns address {
-    order: 1;
-}
-
 .footer-navigation {
-    order: 2;
     text-align: center;
     margin: 0;
     margin-bottom: 67px;
@@ -467,6 +606,15 @@ a:focus, a:hover, a:active {
 }
 
 .footer-navigation li {
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.footer-navigation li {
     display: inline;
 }
 
@@ -475,19 +623,12 @@ a:focus, a:hover, a:active {
 }
 
 .phone {
-    order: 3;
     text-align: right;
 }
 
-.footer-rect {
-    order: 4;
-}
-
 .socials {
-    order: 5;
     text-align: center;
     margin: 0;
-    margin-bottom: 65px;
 }
 
 .socials ul {
@@ -505,7 +646,6 @@ a:focus, a:hover, a:active {
 }
 
 .htmlacademy {
-    order: 6;
     text-align: right;
 }
 
