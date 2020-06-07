@@ -65,66 +65,74 @@
     <h1 class="content-title visually-hidden">Магазин цифровой техники DEVICE</h1>
     
     <section class="slider">
-      <button>Подробнее</button>
-      <input type="radio" class="switch switched1" name="slider-switch" value="1" checked>
-      <input type="radio" class="switch switched2" name="slider-switch" value="2">
-      <input type="radio" class="switch switched3" name="slider-switch" value="3">
-      <article class="slide slide1">
+      <article class="slide current-slide">
         <img src="img/content/selfie-stick.png" alt="Палка-монопод для селфи" width="384" height="485">
         <div class="specification">
           <h2>Делай селфи, как Бен Стиллер!</h2>
           <span class="slider-number">01</span>
-          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров диной и весом всего 5
-            килограммов.</p>
-            <div class="features">
-              <div class="feature">
-                <span class="feature-value">8,5 м</span>
-              <span class="feature-type">Длина палки</span>
-            </div>
-            <div class="feature">
-              <span class="feature-value">5 кг</span>
-              <span class="feature-type">Вес палки</span>
-            </div>
-            <div class="feature">
-              <span class="feature-value">Карбон</span>
-              <span class="feature-type">Материал</span>
-            </div>
+          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров диной и весом всего 5 килограммов.</p>
+          <div class="details">
+            <a class="button" href="#" tabindex="0">Подробнее</a>
           </div>
+          <dl class="features">
+            <div class="feature">
+              <dd>8,5 м</dd>
+              <dt>Длина палки</dt>
+            </div>
+            <div class="feature">
+              <dd>5 кг</dd>
+              <dt>Вес палки</dt>
+            </div>
+            <div class="feature">
+              <dd>Карбон</dd>
+              <dt>Материал</dt>
+            </div>
+          </dl>
         </div>
       </article>
-      <article class="slide slide2">
+      <article class="slide">
         <img src="img/content/fitness-band.png" alt="Фитнес-браслет черного цвета" width="345" height="485">
         <div class="specification">
           <h2>Худеем правильно!</h2>
           <span class="slider-number">02</span>
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-          <div class="features">
-            <div class="feature">
-              <span class="feature-value">48 часов</span>
-              <span class="feature-type">Без подзарядки</span>
-            </div>
+          <div class="details">
+            <a class="button" href="#" tabindex="0">Подробнее</a>
           </div>
+          <dl class="features">
+            <div class="feature">
+              <dd>48 часов</dd>
+              <dt>Без подзарядки</dt>
+            </div>
+          </dl>
         </div>
       </article>
-      <article class="slide slide3">
+      <article class="slide">
         <img src="img/content/copter.png" alt="Квадрокоптер с подвешенным лазером" width="526" height="334">
         <div class="specification">
           <h2>Порхает как бабочка, жалит как пчела!</h2>
           <span class="slider-number">03</span>
-          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-          </p>
-          <div class="features">
-            <div class="feature">
-              <span class="feature-value">800 м</span>
-              <span class="feature-type">Дальность полета</span>
-            </div>
-            <div class="feature">
-              <span class="feature-value">50 м</span>
-              <span class="feature-type">Радиус поражения</span>
-            </div>
+          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+          <div class="details">
+            <a class="button" href="#" tabindex="0">Подробнее</a>
           </div>
+          <dl class="features">
+            <div class="feature">
+              <dd>800 м</dd>
+              <dt>Дальность полета</dt>
+            </div>
+            <div class="feature">
+              <dd>50 м</dd>
+              <dt>Радиус поражения</dt>
+            </div>
+          </dl>
         </div>
       </article>
+      <div class="slider-controls">
+        <button class="current" type="button" aria-label="Первый слайд"></button> <!-- класс current включает маленький круг внутри кнопки переключения слайда -->
+        <button type="button" aria-label="Второй слайд"></button>
+        <button type="button" aria-label="Третий слайд"></button>
+      </div>
     </section>
     
     <section class="popular">

@@ -221,28 +221,26 @@ a:focus, a:hover, a:active {
 }
 
 /* Основной слайдер */
-.slide {
-    width: 1180px;
+.slider {
+    position: relative;
+}
+
+.slider .current-slide {
     min-height: 520px;
-    padding-right: 60px;
-    margin-top: -195px;
+    padding-right: 50px;
+    margin-top: -170px;
 
     display: grid;
     grid-template-columns: 600px 1fr;
 }
 
-.details {
+.slide .details {
     position: absolute;
+    left: 0px;
+    bottom: 25%;
 }
 
-.switched1:not(:checked) ~ .slide1 {
-    display: none;
-}
-
-.switched2:not(:checked) ~ .slide2 {
-    display: none;
-}
-.switched3:not(:checked) ~ .slide3 {
+.slide {
     display: none;
 }
 
@@ -253,6 +251,8 @@ a:focus, a:hover, a:active {
 .specification {
     display: flex;
     flex-direction: column;
+
+    position: relative;
 }
 
 .specification h2 {
@@ -283,27 +283,58 @@ a:focus, a:hover, a:active {
 
 .features {
     margin-top: auto;
+
     display: flex;
 }
 
-.features span {
-    display: block;
-}
-
 .feature {
-    padding-right: 50px;
+    padding-right: 20px;
 }
 
-.feature-value {
+.feature dd {
     font-weight: 300;
     font-size: 36px;
     line-height: 42px;
+    padding: 0;
+    margin: 0;
 }
 
-.feature-type {
+.feature dt {
     font-weight: 300;
     font-size: 13px;
     line-height: 15px;
+}
+
+.slider-controls {
+    position: absolute;
+    right: 60px;
+    bottom: 25%;
+}
+
+.slider-controls button {
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 9px;
+
+    position: relative;
+}
+
+.slider-controls .current::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 50%;
 }
 
 /* Популярные разделы магазина */
