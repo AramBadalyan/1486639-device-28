@@ -102,6 +102,34 @@
       <aside class="filter">
         <h2 class="catalog-action">Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru/" method="GET">
+          <fieldset class="price-range">
+            <legend>Стоимость</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="
+                    width: 65%;
+                    margin-left: 0%;
+                  "></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="
+                  left: 0%
+                "></div>
+                <div class="toggle toggle-max" tabindex="0" style="
+                  left: 59%;
+                "></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                   от<input type="number" name="min-price" value="0" step="100">
+                </label>
+                <label class="max-price">
+                  до<input type="number" name="max-price" value="5000" step="100">
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
           <fieldset>
             <legend>Цвет</legend>
             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="color-black" name="black" checked>
@@ -125,6 +153,7 @@
               Розовый
             </label>
           </fieldset>
+
           <fieldset>
             <legend>Bluetooth</legend>
             <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" id="bluetooth-true" value="true" checked>
@@ -146,86 +175,83 @@
         <div class="sort">
           <h2 class="catalog-action">Сортировка:</h2>
           
-          <div class="sort-types">
-            <input class="sort-type-input visually-hidden" id="soting-by-price" type="radio" name="sort-type" value="price" checked>
-            <label class="sort-type" for="soting-by-price">
-              По цене
-            </label>
-            <input class="sort-type-input visually-hidden" id="soting-by-type" type="radio" name="sort-type" value="type">
-            <label class="sort-type" for="soting-by-type">
-              По типу
-            </label>
-            <input class="sort-type-input visually-hidden" id="soting-by-popularity" type="radio" name="sort-type" value="popularity">
-            <label class="sort-type" for="soting-by-popularity">
-              По популярности
-            </label>
-          </div>
+          <ul class="sort-types"> <!-- Класс "active-type" означает выбранный тип сортировки -->
+            <li class="sort-type active-type"><a href="#" >По цене</a></li> 
+            <li class="sort-type"><a href="#">По типу</a></li>
+            <li class="sort-type"><a href="#">По популярности</a></li>
+          </ul>
           
-          <div>
-            <input class="order-input-radio visually-hidden" type="radio" id="a-to-z" name="sort-order" value="a-to-z" checked>
-            <label class="sort-order" for="a-to-z" aria-label="Отсортировать по возрастанию">
-            </label>
-            <input class="order-input-radio visually-hidden" type="radio" id="z-to-a" name="sort-order" value="z-to-a">
-            <label class="sort-order" for="z-to-a" aria-label="Отсортировать по убыванию">
-            </label>          
-          </div>
+          <ul class="sort-orders"> <!-- Класс "active-order" означает выбранное направление -->
+            <li class="sort-order" tabindex="0"><a tabindex="-1" class="visually-hidden" href="#">Отсортировать по возрастанию</a></li>
+            <li class="sort-order active-order" tabindex="0"><a tabindex="-1" class="visually-hidden" href="#">Отсортировать по убыванию</a></li>
+          </ul>
         </div>
 
         <ul class="items">
           <li>
             <article class="item">
               <img class="item-img" src="img/content/item-1.jpg" alt="Любительская селфи палка" width="360" height="380">
-              <h2 class="item-title"><a href="#">Любительская селфи палка</a></h2> <!-- h1 уже в заголовке-->
-              <span class="item-price">500 руб.</span>
+              <a href="#" class="item-description">
+                <h2 class="item-title">Любительская селфи палка</h2>
+                <span class="item-price">500 руб.</span>
+              </a>
               <div class="item-actions">
-                <button type="button" class="button">В корзину</button>
-                <button type="button">Добавить к сравнению</button>
+                <a href="#" class="button">В корзину</a>
+                <a href="#">Добавить к сравнению</a>
               </div>
             </article>
           </li>
           <li>
             <article class="item">
               <img class="item-img" src="img/content/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
-              <h2 class="item-title"><a href="#">Профессиональная селфи-палка</a></h2>
-              <span class="item-price">1500 руб.</span>
+              <a href="#" class="item-description">
+                <h2 class="item-title">Профессиональная селфи-палка</h2>
+                <span class="item-price">1 500 руб.</span>
+              </a>
               <div class="item-actions">
-                <button type="button" class="button">В корзину</button>
-                <button type="button">Добавить к сравнению</button>
+                <a href="#" class="button">В корзину</a>
+                <a href="#">Добавить к сравнению</a>
               </div>
             </article>
           </li>
           <li>
             <article class="item">
               <img class="item-img" src="img/content/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
-              <h2 class="item-title"><a href="#">Непотопляемая селфи-палка</a></h2>
-              <span class="item-price">2500 руб.</span>
+              <a href="#" class="item-description">
+                <h2 class="item-title">
+                  Непотопляемая селфи-палка
+                </h2>
+                <span class="item-price">2 500 руб.</span>
+              </a>
               <div class="item-actions">
-                <button type="button" class="button">В корзину</button>
-                <button type="button">Добавить к сравнению</button>
+                <a href="#" class="button">В корзину</a>
+                <a href="#">Добавить к сравнению</a>
               </div>
             </article>
           </li>
           <li>
             <article class="item new">
               <img class="item-img" src="img/content/item-4.jpg" alt="Селфи-палка ледуй за мной»" width="360" height="380">
-              <h2 class="item-title"><a href="#">Селфи-палка «Следуй за мной»</a></h2>
-              <span class="item-price">4900 руб.</span>
+              <a href="#" class="item-description">
+                <h2 class="item-title">Селфи-палка «Следуй за мной»</h2>
+                <span class="item-price">4 900 руб.</span>
+              </a>
               <div class="item-actions">
-                <button type="button" class="button">В корзину</button>
-                <button type="button">Добавить к сравнению</button>
+                <a href="#" class="button">В корзину</a>
+                <a href="#">Добавить к сравнению</a>
               </div>
             </article>
           </li>
         </ul>
 
         <div class="goods-switch">
-          <button type="button" class="switch-button back">Назад</button>
+          <a href="#" class="switch-button back">Назад</a>
           <ul class="goods-pages">
             <li class="goods-page current-page"><a>1</a></li>
             <li class="goods-page"><a href="#">2</a></li>
             <li class="goods-page"><a href="#">3</a></li>
           </ul>
-          <button type="button" class="switch-button forward">Вперед</button>
+          <a href="#" class="switch-button forward">Вперед</a>
         </div>
       </section>
     </div>

@@ -835,6 +835,7 @@ a:focus, a:hover, a:active {
     padding-bottom: 25px;
 }
 
+/* Сортировка товаров */
 .sort {
     background-color: var(--basic-grey-light);
 
@@ -845,6 +846,7 @@ a:focus, a:hover, a:active {
     margin-bottom: 70px;
 }
 
+/* Тип сортировки */
 .sort-types {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: normal;
@@ -853,6 +855,9 @@ a:focus, a:hover, a:active {
 
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .sort-type {
@@ -868,8 +873,15 @@ a:focus, a:hover, a:active {
 }
 
 .sort-type:active,
-.sort-type-input:checked + .sort-type {
+.sort-type.active-type {
     opacity: 1;
+}
+
+/* Направление сортировки */
+.sort-orders {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .sort-order {
@@ -887,6 +899,7 @@ a:focus, a:hover, a:active {
     background-image: url('../img/design/sorting-order.svg');
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 
     position: absolute;
     top: 0;
@@ -894,16 +907,16 @@ a:focus, a:hover, a:active {
     opacity: 0.2;
 }
 
-.sort-order[for="a-to-z"] {
+.sort-order:first-child {
     transform: rotate(180deg);
 }
 
-.order-input-radio:checked + .sort-order::before {
+.sort-order.active-order::before,
+.sort-order:active::before {
     opacity: 1;
 }
 
-.sort-order:hover::before,
-.order-input-radio:checked + .sort-order:hover::before {
+.sort-order:hover::before {
     opacity: 0.4;
 }
 
@@ -930,12 +943,20 @@ a:focus, a:hover, a:active {
     line-height: 17px;
     letter-spacing: 0.1em;
 
+    padding-top: 14px;
+    margin-bottom: 30px;
+
     display: inline-block;
     min-width: 200px;
     border-top: 2px solid var(--basic-black);
 }
 
 .filter .button {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+
     width: 100%;
     margin-top: 45px;
 }
@@ -1006,6 +1027,70 @@ a:focus, a:hover, a:active {
     left: 8px;
 }
 
+/* Диапозон цен */ 
+.range-controls {
+    height: 20px;
+    padding-top: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+
+    position: relative;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background-color: #CCCCCC;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background-color: var(--special-green);
+}
+
+.range-controls .toggle {
+    width: 20px;
+    height: 20px;
+    background-color: #c4c4c4;
+    border: 8px solid #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+}
+
+.range-controls .toggle-min {
+    left: 0px;
+}
+
+.range-controls .toggle-max {
+    left: 126px;
+}
+
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-controls label {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.price-controls input {
+    font-family: inherit;
+    font-size: inherit;
+
+    width: 60px;
+    padding-left: 5px;
+    border: 0;
+    background-color: transparent;
+}
+
 .goods {
     width: 760px;
 }
@@ -1015,42 +1100,20 @@ a:focus, a:hover, a:active {
     margin-bottom: 42px;
 }
 
-.item-title,
-.item-price {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
+.item-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
-/* 
-.item-price {
-    padding-left: 5px;
-    position: relative;
-    top: auto;
-    right: 0;
-} */
-
-.filter legend {
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 17px;
-
-    padding-top: 14px;
-    margin-bottom: 30px;
-}
-
-.filter button {
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 22px;
-    text-transform: uppercase;
-}
 
 .item-title {
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
     color: inherit;
+    
+    margin: 0;
 }
 
 .item-price {
@@ -1058,6 +1121,9 @@ a:focus, a:hover, a:active {
     line-height: 18px;
     color: inherit;
     letter-spacing: 0.05em;
+
+    flex-shrink: 0;
+    margin-left: 5px;
 }
 
 .items {
@@ -1077,7 +1143,7 @@ a:focus, a:hover, a:active {
     line-height: 15px;
     text-align: center;
     padding-top: 21px;
-
+    
     width: 62px;
     height: 62px;
     border: 2px solid var(--basic-black);
@@ -1164,7 +1230,7 @@ a:focus, a:hover, a:active {
     display: none;
 
     position: absolute;
-    z-index: 5;
+    z-index: 0;
     top: 0;
     left: 0;
 }
