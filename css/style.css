@@ -77,6 +77,8 @@ a:focus, a:hover, a:active {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: center;
+
+    overflow-x: hidden;
 }
 
 .header {
@@ -247,7 +249,7 @@ a:focus, a:hover, a:active {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .nav-links > li {
@@ -318,7 +320,9 @@ a:focus, a:hover, a:active {
 .content {
     width: 1180px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .content-title {
@@ -346,7 +350,7 @@ a:focus, a:hover, a:active {
 /* Основной слайдер */
 .slider {
     position: relative;
-    margin-top: -35px;
+    margin-top: -17px;
 }
 
 .slider::before {
@@ -360,7 +364,7 @@ a:focus, a:hover, a:active {
     position: absolute;
     top: 0;
     bottom: auto;
-    z-index: -1;
+    z-index: -3;
 }
 
 .slide {
@@ -372,7 +376,7 @@ a:focus, a:hover, a:active {
     margin-top: 0;
 
     display: grid;
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 560px 1fr;
 }
 
 .slide .details {
@@ -380,8 +384,8 @@ a:focus, a:hover, a:active {
 }
 
 .slide .button {
-    padding-left: 45px;
-    padding-right: 45px;
+    min-width: 220px;
+    text-align: center;
 }
 
 .slide img {
@@ -393,6 +397,7 @@ a:focus, a:hover, a:active {
     flex-direction: column;
 
     position: relative;
+    padding-left: 40px;
 }
 
 .specification::before {
@@ -403,8 +408,8 @@ a:focus, a:hover, a:active {
     background-color: var(--basic-white);
     border: 0;
     position: absolute;
-    top: 33px;
-    left: 0;
+    top: 35px;
+    left: 40px;
 }
 
 .specification h2 {
@@ -422,7 +427,15 @@ a:focus, a:hover, a:active {
     font-weight: 300;
     font-size: 15px;
     line-height: 20px;
-    margin: 25px 0;
+    margin: 0;
+}
+
+.specification p:first-of-type {
+    margin-top: 25px;
+}
+
+.specification p:last-of-type {
+    margin-bottom: 50px;
 }
 
 .slider-number {
@@ -439,7 +452,7 @@ a:focus, a:hover, a:active {
 
 .features {
     margin: 0;
-    margin-top: 60px;
+    margin-top: 35px;
 
     display: flex;
     flex-wrap: wrap;
@@ -449,25 +462,31 @@ a:focus, a:hover, a:active {
     margin-right: 62px;
 }
 
-.feature dd {
+.feature dt {
     font-weight: 300;
     font-size: 36px;
     line-height: 42px;
     letter-spacing: 0.1em;
+
     padding: 0;
     margin: 0;
+    margin-bottom: 15px;
 }
 
-.feature dt {
+.feature dd {
     font-weight: 300;
     font-size: 13px;
     line-height: 15px;
+    letter-spacing: 0.1em;
+
+    padding: 0;
+    margin: 0;
 }
 
 .slider-controls {
     position: absolute;
     right: 80px;
-    bottom: 130px;
+    bottom: 150px;
 }
 
 .slider-controls button {
@@ -498,8 +517,8 @@ a:focus, a:hover, a:active {
 
 /* Популярные разделы магазина */
 .popular {
-    padding: 120px 0;
-    margin: 0;
+    padding: 50px 0;
+    margin-top: 50px;
 }
 
 .category {
@@ -534,6 +553,18 @@ a:focus, a:hover, a:active {
 }
 
 /* Услуги */
+.service-list::before {
+    content: '';
+
+    background-color: var(--basic-grey-light);
+    width: 9999px;
+    height: 288px;
+    position: absolute;
+    top: 78px;
+    left: -4000px;
+    z-index: -5;
+}
+
 .service-list .service {
     display: none;
 }
@@ -561,7 +592,10 @@ a:focus, a:hover, a:active {
 }
 
 .service-list {
-    padding: 35px 0;
+    padding: 50px 0;
+    margin-top: 55px;
+
+    position: relative;
     display: grid;
     grid-template-columns: 280px 1fr;
 }
@@ -575,10 +609,10 @@ a:focus, a:hover, a:active {
     content: "";
 
     width: 7px;
-    height: 160%;
+    height: 163%;
     background-color: var(--basic-black);
     position: absolute;
-    top: -70px;
+    top: -72px;
     left: 277px;
 }
 
@@ -646,7 +680,7 @@ a:focus, a:hover, a:active {
 .partners {
     padding: 60px 0;
     margin: 0;
-    margin-top: 115px;
+    margin-top: 100px;
 }
 
 .partners-list {
@@ -670,8 +704,8 @@ a:focus, a:hover, a:active {
 /* О нас и Контакты */
 .index-columns {
     min-height: 640px;
-    padding: 26px 0;
-    margin-bottom: 52px;
+    padding: 25px 0;
+    margin-bottom: 51px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -759,10 +793,42 @@ a:focus, a:hover, a:active {
 }
 
 /* Страницы каталога */
-.catalog {
-    padding: 0;
+.title-container {
     padding-left: 70px;
-    padding-right: 10px;
+    margin-top: 43px;
+}
+
+.main-container {
+    position: relative;
+    width: 99vw;
+    overflow: hidden;
+}
+
+.main-container::before {
+    content: "";
+
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 70px;
+
+    position: absolute;
+    top: 0px;
+    left: auto;
+    right: auto;
+    z-index: -5;
+}
+
+.filter::before {
+    content: "";
+
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 9999px;
+    height: calc(100% + 300px);
+
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: -5;
 }
 
 /* Хлебные крошки */ 
@@ -819,26 +885,26 @@ a:focus, a:hover, a:active {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
+
+    padding-left: 70px;
 }
 
 .catalog-action {
 
     font-weight: 800;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     
     margin: 0;
-    padding-right: 75px;
+    padding-right: 60px;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
 /* Сортировка товаров */
 .sort {
-    background-color: var(--basic-grey-light);
-
     display: grid;
     grid-template-columns: min-content 1fr 50px;
     align-items: center;
@@ -923,18 +989,22 @@ a:focus, a:hover, a:active {
 
  /* Фильтр */
 .filter {
-    width: 268px;
-    padding-right: 68px;
+    width: 270px;
+    padding-right: 60px;
+    padding-left: 2px;
 
     position: relative;
-    background-color: var(--basic-grey-light);
+}
+
+.filter-form {
+    margin-top: 70px;
 }
 
 .filter fieldset {
     margin: 0;
     padding: 0;
     border: 0;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .filter legend {
@@ -944,7 +1014,7 @@ a:focus, a:hover, a:active {
     letter-spacing: 0.1em;
 
     padding-top: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 
     display: inline-block;
     min-width: 200px;
@@ -973,7 +1043,7 @@ a:focus, a:hover, a:active {
     user-select: none;
     cursor: pointer;
     padding: 10px 0;
-    padding-left: 42px;
+    padding-left: 43px;
 }
 
 .filter-input-checkbox + label::before {
@@ -1027,13 +1097,18 @@ a:focus, a:hover, a:active {
     left: 8px;
 }
 
-/* Диапозон цен */ 
+/* Диапозон цен */
+.range-filter {
+    margin-top: 8px;
+    margin-bottom: 7px;
+}
+
 .range-controls {
     height: 20px;
     padding-top: 9px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 
     position: relative;
 }
@@ -1160,8 +1235,8 @@ a:focus, a:hover, a:active {
     margin-bottom: 30px;
 }
 
-.item-img:hover {
-    opacity: 0.7;
+.item:hover .item-img {
+    opacity: 0.3;
 }
 
 .goods-switch {
@@ -1222,21 +1297,40 @@ a:focus, a:hover, a:active {
     margin: 0 5px;
 }
 
-.item-img:hover ~ .item-actions {
+.item:hover .item-actions {
     display: unset;
 }
+
+/* .item:hover .item-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
 
 .item-actions {
     display: none;
 
     position: absolute;
     z-index: 0;
-    top: 0;
-    left: 0;
+    top: 170px;
+    left: 80px;
 }
 
-.item-actions button {
+.item-actions a {
     display: block;
+    min-width: 200px;
+    text-align: center;
+}
+
+.compare-link {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+
+    margin-top: 15px;
 }
 
 /* Кнопки и ссылки */
@@ -1564,4 +1658,12 @@ a:focus, a:hover, a:active {
     background-color: transparent;
     border: 0;
     opacity: 0.94;
+}
+
+.map-iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+    border: 0;
+    /* allowfullscreen="true" Найти замену атрибута в CSS */
 }
