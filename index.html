@@ -26,14 +26,17 @@
         <label for="search-field">
           <input type="search" class="search-field" name="search-field" id="search-field" placeholder="Поиск по сайту">
         </label>
-        <button class="search-button" type="submit">Найти</button> <!-- класс field-focused включает кнопку отправки поисковой формы -->
+        <button class="search-button " type="submit">Найти</button> <!-- класс "field-focused" включает кнопку отправки поисковой формы -->
       </form>
-      <div class="authorization">
+      <div class="authorization"> <!-- Класс "logged" управляет отображением имени пользователя и Войти/Выйти -->
+        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
+        </svg>
         <a href="#">
-          <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
-          </svg>
-          Войти
+          <p class="username"></p>
+        </a>
+        <a href="#">
+          <p class="login"></p>
         </a>
       </div>
       
@@ -67,7 +70,7 @@
     <nav class="nav">
       <ul class="nav-links">
         <li>
-          <a href="catalog.html">Каталог товаров</a>
+          <a href="catalog.html" class="catalog-link">Каталог товаров</a>
           <ul class="catalog-menu"> <!-- reveal - класс для отображения -->
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
@@ -94,7 +97,7 @@
     <h1 class="content-title visually-hidden">Магазин цифровой техники DEVICE</h1>
     
     <section class="slider">
-      <article class="slide current-slide">
+      <article class="slide">
         <img src="img/content/selfie-stick.png" alt="Палка-монопод для селфи" width="384" height="485">
         <div class="specification">
           <h2>Делай селфи,<br>как Бен Стиллер!</h2>
@@ -137,7 +140,7 @@
           </div>
         </div>
       </article>
-      <article class="slide">
+      <article class="slide current-slide">
         <img src="img/content/copter.png" alt="Квадрокоптер с подвешенным лазером" width="526" height="334">
         <div class="specification">
           <h2>Порхает как бабочка, жалит как пчела!</h2>
@@ -167,8 +170,8 @@
     
     <section class="popular">
       <h2 class="visually-hidden">Популярные разделы</h2>
-      <ul class="category">
-        <li><a href="#">
+      <ul class="categories">
+        <li><a class="category" href="#">
             <div class="icon-background">
               <svg width="97" height="55" aria-label="Иконка: шлем виртуальной реальности" viewBox="0 0 97 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -191,7 +194,7 @@
             </div>
             Виртуальная реальность
           </a></li>
-        <li><a href="catalog.html">
+        <li><a class="category" href="catalog.html">
             <div class="icon-background">
               <svg width="86" height="117" aria-label="Иконка: селфи-палка со смартмоном" viewBox="0 0 86 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -212,7 +215,7 @@
             </div>
             Моноподы для селфи
           </a></li>
-        <li><a href="#">
+        <li><a class="category" href="#">
             <div class="icon-background">
               <svg width="71" height="87" aria-label="Иконка: экшн-камера на подставке" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -256,7 +259,7 @@
             </div>
             Экшн-камеры
           </a></li>
-        <li><a href="#">
+        <li><a class="category" href="#">
             <div class="icon-background">
               <svg width="107" height="65" aria-label="Иконка: фитнес-браслет с пульсометром" viewBox="0 0 107 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -276,7 +279,7 @@
             </div>
             Фитнес-браслеты
           </a></li>
-        <li><a href="#">
+        <li><a class="category" href="#">
             <div class="icon-background">
               <svg width="56" height="98" aria-label="Иконка: наручные электронные часы" viewBox="0 0 56 98" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -299,7 +302,7 @@
             </div>
             Умные часы
           </a></li>
-        <li><a href="#">
+        <li><a class="category" href="#">
             <div class="icon-background">
               <svg width="132" height="69" aria-label="Иконка: коптер с камерой" viewBox="0 0 132 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -475,42 +478,44 @@
     <div class="content">
 
       <div class="footer-links">
-        <div class="authorization">
+        <div class="authorization logged"> <!-- Класс "logged" управляет отображением имени пользователя и Войти/Выйти -->
+          <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
+          </svg>
           <a href="#">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
-              </svg>  
-            Войти
+            <p class="username"></p>
+          </a>
+          <a href="#">
+            <p class="login"></p>
           </a>
         </div>
-        <div class="cart-links">
-          <ul>
-            <li>
-              <a href="#">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.91675 5.36667H4.66675V11.0833H2.91675V5.36667ZM6.18342 2.91667H7.81675V11.0833H6.18342V2.91667ZM9.45008 7.58334H11.0834V11.0833H9.45008V7.58334Z" fill="black"/>
-                </svg>
-                Сравнить
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#cart1)">
-                <path d="M9.86215 2.5217C9.79278 2.43991 9.69341 2.39316 9.58927 2.39316H7.65774V3.4188C7.65774 3.89008 7.25359 4.2735 6.75684 4.2735C6.26008 4.2735 5.85593 3.89008 5.85593 3.4188V2.39316H4.05413V3.4188C4.05413 3.89008 3.64999 4.2735 3.15323 4.2735C2.65648 4.2735 2.25233 3.89008 2.25233 3.4188V2.39316H0.32089C0.216656 2.39316 0.117286 2.43991 0.0479169 2.5217C-0.0215425 2.6035 -0.0544254 2.71256 -0.0425335 2.82145L0.605665 8.78461C0.617737 9.45692 1.14179 9.99999 1.78431 9.99999H8.12584C8.76828 9.99999 9.29233 9.45692 9.30449 8.78452L9.95269 2.82136C9.96449 2.71256 9.93161 2.6035 9.86215 2.5217Z" fill="#231F20"/>
-                <path d="M3.15333 3.76068C3.35207 3.76068 3.51369 3.60735 3.51369 3.4188V1.53846C3.51369 1.01051 4.07486 0.683761 4.59477 0.683761H5.49567C6.04288 0.683761 6.39657 1.01923 6.39657 1.53846V3.4188C6.39657 3.60735 6.55829 3.76068 6.75693 3.76068C6.95558 3.76068 7.11729 3.60735 7.11729 3.4188V1.53846C7.11729 0.647009 6.43531 0 5.49567 0H4.59477C3.60126 0 2.79297 0.690171 2.79297 1.53846V3.4188C2.79297 3.60735 2.95459 3.76068 3.15333 3.76068Z" fill="#231F20"/>
-                </g>
-                <defs>
-                <clipPath id="cart1">
-                <path d="M0 0H10V10H0V0Z" fill="white"/>
-                </clipPath>
-                </defs>
-                </svg>
-                Корзина
-              </a>
-            </li>
-          </ul>
-        </div>
+
+        <ul class="cart-links">
+          <li>
+            <a href="#">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.91675 5.36667H4.66675V11.0833H2.91675V5.36667ZM6.18342 2.91667H7.81675V11.0833H6.18342V2.91667ZM9.45008 7.58334H11.0834V11.0833H9.45008V7.58334Z" fill="black"/>
+              </svg>
+              Сравнить
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#cart1)">
+              <path d="M9.86215 2.5217C9.79278 2.43991 9.69341 2.39316 9.58927 2.39316H7.65774V3.4188C7.65774 3.89008 7.25359 4.2735 6.75684 4.2735C6.26008 4.2735 5.85593 3.89008 5.85593 3.4188V2.39316H4.05413V3.4188C4.05413 3.89008 3.64999 4.2735 3.15323 4.2735C2.65648 4.2735 2.25233 3.89008 2.25233 3.4188V2.39316H0.32089C0.216656 2.39316 0.117286 2.43991 0.0479169 2.5217C-0.0215425 2.6035 -0.0544254 2.71256 -0.0425335 2.82145L0.605665 8.78461C0.617737 9.45692 1.14179 9.99999 1.78431 9.99999H8.12584C8.76828 9.99999 9.29233 9.45692 9.30449 8.78452L9.95269 2.82136C9.96449 2.71256 9.93161 2.6035 9.86215 2.5217Z" fill="#231F20"/>
+              <path d="M3.15333 3.76068C3.35207 3.76068 3.51369 3.60735 3.51369 3.4188V1.53846C3.51369 1.01051 4.07486 0.683761 4.59477 0.683761H5.49567C6.04288 0.683761 6.39657 1.01923 6.39657 1.53846V3.4188C6.39657 3.60735 6.55829 3.76068 6.75693 3.76068C6.95558 3.76068 7.11729 3.60735 7.11729 3.4188V1.53846C7.11729 0.647009 6.43531 0 5.49567 0H4.59477C3.60126 0 2.79297 0.690171 2.79297 1.53846V3.4188C2.79297 3.60735 2.95459 3.76068 3.15333 3.76068Z" fill="#231F20"/>
+              </g>
+              <defs>
+              <clipPath id="cart1">
+              <path d="M0 0H10V10H0V0Z" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+              Корзина
+            </a>
+          </li>
+        </ul>
       </div>
 
       <a class="footer-logo">

@@ -121,8 +121,6 @@ a:focus, a:hover, a:active {
 }
 
 .link-line a {
-    display: flex;
-    align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -138,7 +136,7 @@ a:focus, a:hover, a:active {
 }
 
 .link-line svg {
-    margin-right: 12px;
+    margin-right: 8px;
 }
 
 .search {
@@ -161,7 +159,7 @@ a:focus, a:hover, a:active {
 
     width: 16px;
     height: 16px;
-    background-image: url('../img/design/icon_search.svg');
+    background-image: url(../img/design/icon_search.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     position: absolute;
@@ -219,21 +217,45 @@ a:focus, a:hover, a:active {
     position: relative;
 }
 
-.cart-links {
+.authorization p {
+    display: inline-block;
     margin: 0;
-    flex-shrink: 0;
-    margin-left: auto;
 }
 
-.cart-links ul {
+.authorization .username {
+    display: none;
+}
+
+.authorization .login::before {
+    content: "Войти";
+    /* opacity: 1; */
+}
+
+.authorization.logged .username {
+    display: unset;
+    padding-right: 20px;
+}
+
+.authorization.logged .username::before {
+    content: "Валентин Петухов";
+}
+
+.authorization.logged .login::before {
+    content: "Выйти";
+    opacity: 0.3;
+}
+
+.cart-links {
+    flex-shrink: 0;
+    margin-left: auto;
+    
     padding: 0;
     margin: 0;
-    text-align: right;
 }
 
 .cart-links li {
     display: inline-block;
-    padding-left: 39px;
+    padding-left: 40px;
 }
 
 .nav {
@@ -277,6 +299,30 @@ a:focus, a:hover, a:active {
     letter-spacing: 0.2em;
 }
 
+.catalog-link {
+    padding-right: 37px;
+    position: relative;
+}
+
+.catalog-link::after {
+    content: "";
+
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    background-image: url(../img/design/icon_plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.catalog-link:active::after {
+    transform: rotate(45deg);
+}
+
 .catalog-menu {
     display: none;
 }
@@ -284,12 +330,13 @@ a:focus, a:hover, a:active {
 .catalog-menu.reveal {
     background-color: var(--special-yellow-light);
 
+    width: 1160px;
+    min-height: 163px;
     margin: 0;
     padding: 0;
     padding-top: 10px;
-    padding-right: 500px;
-    width: 100%;
-    min-height: 165px;
+    padding-right: 560px;
+    padding-left: 60px;
 
     display: flex;
     justify-content: space-between;
@@ -298,7 +345,7 @@ a:focus, a:hover, a:active {
 
     position: absolute;
     top: auto;
-    left: auto;
+    left: -60px;
     z-index: 1;
 }
 
@@ -418,8 +465,6 @@ a:focus, a:hover, a:active {
     line-height: 58px;
     margin: 0;
     margin-top: 95px;
-
-    z-index: 1;
 }
 
 .specification p {
@@ -448,6 +493,7 @@ a:focus, a:hover, a:active {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
 }
 
 .features {
@@ -521,7 +567,7 @@ a:focus, a:hover, a:active {
     margin-top: 50px;
 }
 
-.category {
+.categories {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -530,7 +576,12 @@ a:focus, a:hover, a:active {
     justify-content: space-between;
 }
 
-.category li {
+.categories li {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+
     flex-basis: 160px;
 }
 
@@ -545,11 +596,9 @@ a:focus, a:hover, a:active {
     align-items: center;
 }
 
-.category li {
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.05em;
+.category:hover .icon-background,
+.category:focus .icon-background {
+    background-color: var(--special-yellow-dark);
 }
 
 /* Услуги */
@@ -609,7 +658,7 @@ a:focus, a:hover, a:active {
     content: "";
 
     width: 7px;
-    height: 163%;
+    height: calc(100% + 123px);
     background-color: var(--basic-black);
     position: absolute;
     top: -72px;
@@ -730,6 +779,11 @@ a:focus, a:hover, a:active {
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
+}
+
+.index-columns .button {
+    min-width: 260px;
+    text-align: center;
 }
 
 .about-us {
@@ -884,7 +938,7 @@ a:focus, a:hover, a:active {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
 
     padding-left: 70px;
 }
@@ -962,7 +1016,7 @@ a:focus, a:hover, a:active {
     width: 20px;
     height: 20px;
     background-color: transparent;
-    background-image: url('../img/design/sorting-order.svg');
+    background-image: url(../img/design/sorting-order.svg);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -991,7 +1045,6 @@ a:focus, a:hover, a:active {
 .filter {
     width: 270px;
     padding-right: 60px;
-    padding-left: 2px;
 
     position: relative;
 }
@@ -1027,8 +1080,8 @@ a:focus, a:hover, a:active {
     line-height: 22px;
     text-transform: uppercase;
 
-    width: 100%;
-    margin-top: 45px;
+    min-width: 200px;
+    margin-top: 35px;
 }
 
 .filter-input + label {
@@ -1064,7 +1117,7 @@ a:focus, a:hover, a:active {
     width: 14px;
     height: 11px;
     background-color: transparent;
-    background-image: url('../img/design/checkbox-mark.svg');
+    background-image: url(../img/design/checkbox-mark.svg);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
@@ -1095,6 +1148,30 @@ a:focus, a:hover, a:active {
     position: absolute;
     top: 16px;
     left: 8px;
+}
+
+.filter-form label:hover::before,
+.filter-form label:hover::after,
+.filter-form label:focus::before,
+.filter-form label:focus::after {
+    opacity: 0.6;
+}
+
+.filter-form label:active::before {
+    opacity: 1;
+}
+
+.filter-input-checkbox + label:active::after {
+    display: none;
+}
+
+.filter-input-radio + label:active::after {
+    opacity: 1;
+}
+
+.filter-input:disabled + label {
+    opacity: 0.25;
+    cursor: auto;
 }
 
 /* Диапозон цен */
@@ -1172,7 +1249,7 @@ a:focus, a:hover, a:active {
 
 .item {
     position: relative;
-    margin-bottom: 42px;
+    margin-bottom: 49px;
 }
 
 .item-description {
@@ -1186,6 +1263,7 @@ a:focus, a:hover, a:active {
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
+    letter-spacing: 0.05em;
     color: inherit;
     
     margin: 0;
@@ -1198,7 +1276,7 @@ a:focus, a:hover, a:active {
     letter-spacing: 0.05em;
 
     flex-shrink: 0;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .items {
@@ -1232,7 +1310,7 @@ a:focus, a:hover, a:active {
 .item-img {
     width: 360px;
     height: 380px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .item:hover .item-img {
@@ -1244,6 +1322,9 @@ a:focus, a:hover, a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin-top: -8px;
+    margin-bottom: 8px;
 }
 
 .goods-page {
@@ -1268,6 +1349,8 @@ a:focus, a:hover, a:active {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 
+    min-width: 120px;
+    text-align: center;
     padding: 25px 30px;
     border: 0;
     background-color: transparent;
@@ -1301,19 +1384,12 @@ a:focus, a:hover, a:active {
     display: unset;
 }
 
-/* .item:hover .item-actions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 .item-actions {
     display: none;
 
     position: absolute;
     z-index: 0;
-    top: 170px;
+    top: 168px;
     left: 80px;
 }
 
@@ -1331,6 +1407,16 @@ a:focus, a:hover, a:active {
     letter-spacing: 0.1em;
 
     margin-top: 15px;
+    opacity: 0.5;
+}
+
+.compare-link:hover,
+.compare-link:focus {
+    opacity: 1;
+}
+
+.compare-link:active {
+    opacity: 0.2;
 }
 
 /* Кнопки и ссылки */
@@ -1396,7 +1482,7 @@ a:focus, a:hover, a:active {
     font-weight: 300;
     font-size: 15px;
     line-height: 20px;
-    padding-bottom: 65px;
+    padding-bottom: 60px;
 }
 
 .footer-links {
@@ -1405,12 +1491,10 @@ a:focus, a:hover, a:active {
     flex-direction: row;
     justify-content: end;
 
-    padding-top: 37px;
+    padding-top: 45px;
 }
 
 .footer-links a {
-    display: flex;
-    align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -1425,7 +1509,7 @@ a:focus, a:hover, a:active {
 }
 
 .footer-links svg {
-    margin-right: 12px;
+    margin-right: 8px;
 }
 
 .footer-links path {
@@ -1443,7 +1527,6 @@ a:focus, a:hover, a:active {
 
 .footer-logo {
     display: inline-block;
-    margin-top: -15px;
     margin-bottom: 35px;
 }
 
@@ -1468,6 +1551,10 @@ a:focus, a:hover, a:active {
 
 .footer-contacts svg {
     align-self: center;
+}
+
+.footer-contacts .rectangle {
+    margin-top: -7px;
 }
 
 .footer-navigation {
