@@ -6,7 +6,7 @@
   <title>HTML Academy: Девайс</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
 
 <body class="page-body">
@@ -22,21 +22,22 @@
       </a>
     </div>
     <div class="link-line">
-      <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
+      <form class="search" action="https://echo.htmlacademy.ru/" method="GET"> <!-- класс "field-focused" включает кнопку отправки поисковой формы -->
         <label for="search-field">
           <input type="search" class="search-field" name="search-field" id="search-field" placeholder="Поиск по сайту">
         </label>
-        <button class="search-button " type="submit">Найти</button> <!-- класс "field-focused" включает кнопку отправки поисковой формы -->
+        <button class="search-button " type="submit">Найти</button> 
       </form>
-      <div class="authorization"> <!-- Класс "logged" управляет отображением имени пользователя и Войти/Выйти -->
-        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
-        </svg>
+      <div class="authorization logged"> <!-- Класс "logged" управляет отображением имени пользователя и Войти/Выйти -->
         <a href="#">
-          <p class="username"></p>
+          <p class="login">
+            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
+            </svg>
+          </p>
         </a>
         <a href="#">
-          <p class="login"></p>
+          <p class="logout"></p>
         </a>
       </div>
       
@@ -97,7 +98,7 @@
     <h1 class="content-title visually-hidden">Магазин цифровой техники DEVICE</h1>
     
     <section class="slider">
-      <article class="slide">
+      <article class="slide current-slide">
         <img src="img/content/selfie-stick.png" alt="Палка-монопод для селфи" width="384" height="485">
         <div class="specification">
           <h2>Делай селфи,<br>как Бен Стиллер!</h2>
@@ -140,7 +141,7 @@
           </div>
         </div>
       </article>
-      <article class="slide current-slide">
+      <article class="slide ">
         <img src="img/content/copter.png" alt="Квадрокоптер с подвешенным лазером" width="526" height="334">
         <div class="specification">
           <h2>Порхает как бабочка, жалит как пчела!</h2>
@@ -161,10 +162,15 @@
           </div>
         </div>
       </article>
-      <div class="slider-controls">
-        <button class="current" type="button" aria-label="Первый слайд"></button> <!-- класс current включает маленький круг внутри кнопки переключения слайда -->
+      <!-- <div class="slider-controls">
+        <button class="current" type="button" aria-label="Первый слайд"></button>
         <button type="button" aria-label="Второй слайд"></button>
         <button type="button" aria-label="Третий слайд"></button>
+      </div> -->
+      <div class="slider-controls">
+        <button class="slider-control control0 current-control" type="button" aria-label="Первый слайд"></button> <!-- класс current-control включает маленький круг внутри кнопки переключения слайда -->
+        <button class="slider-control control1 " type="button" aria-label="Второй слайд"></button>
+        <button class="slider-control control2 " type="button" aria-label="Третий слайд"></button>
       </div>
     </section>
     
@@ -339,9 +345,9 @@
 
     <section class="service-list">
       <ul class="service-switch">
-        <li class="service-activated"><button class="button" type="button">Доставка</button></li>
-        <li><button class="button" type="button">Гарантия</button></li>
-        <li><button class="button" type="button">Кредит</button></li>
+        <li class="service-button service-activated"><button class="button delivery" type="button">Доставка</button></li>
+        <li class="service-button "><button class="button warranty" type="button">Гарантия</button></li>
+        <li class="service-button "><button class="button credit" type="button">Кредит</button></li>
       </ul>
       
       <div class="service current">
@@ -465,10 +471,10 @@
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
           Всякое
           бывает.</p>
-        <a href="#">
+        <a class="map-link" href="#">
           <img src="img/content/map.png" alt="Наше местоположение" width="560" height="222">
         </a>
-        <a class="button" href="#">Напишите нам</a>
+        <a class="button contact-link" href="#">Напишите нам</a>
       </section>
     </div>
 
@@ -479,14 +485,15 @@
 
       <div class="footer-links">
         <div class="authorization logged"> <!-- Класс "logged" управляет отображением имени пользователя и Войти/Выйти -->
-          <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
-          </svg>
           <a href="#">
-            <p class="username"></p>
+            <p class="login">
+              <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
+              </svg>
+            </p>
           </a>
           <a href="#">
-            <p class="login"></p>
+            <p class="logout"></p>
           </a>
         </div>
 
@@ -597,15 +604,15 @@
     <form class="form-fields" action="https://echo.htmlacademy.ru/" method="POST">
       <label for="name-field" class="name-field">
         Ваше имя:
-        <input type="text" id="name-field" name="name" placeholder="Имя Фамилия" autofocus>
+        <input class="form-field" type="text" id="name-field" name="name" placeholder="Имя Фамилия" autofocus>
       </label>
       <label for="email-field" class="email-field">
         Ваш e-mail:
-        <input type="email" id="email-field" name="email" placeholder="email@example.com">
+        <input class="form-field" type="email" id="email-field" name="email" placeholder="email@example.com">
       </label>
       <label for="message-field" class="message-field">
         Текст письма:
-        <textarea class="message-field" id="message-field" name="message" rows="5" placeholder="В свободной форме"></textarea>
+        <textarea class="form-field message-field" id="message-field" name="message" rows="5" placeholder="В свободной форме"></textarea>
       </label>
       <button type="submit" class="button send-message">
         Отправить
@@ -619,6 +626,8 @@
     <!-- <img src="img/content/map-big.png" width="994" height="593" alt="Нашие местоположение"> -->
     <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/ulitsa_stroiteley_15/Z04YcwVpT0ADQFtvfXp5d3VrZA==/?ll=37.529704%2C55.687108&utm_medium=mapframe&utm_source=maps&z=17.12" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Строителей, 15 — Яндекс.Карты</a><iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/-/CCQdjOG7wC" style="position:relative;"></iframe></div>
   </section>
+  
+  <script src="js/script-min.js"></script>
 
 </body>
 
