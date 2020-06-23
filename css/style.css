@@ -235,17 +235,13 @@ a:focus, a:hover, a:active {
     margin: 0;
 }
 
-.authorization .login::after {
-    content: "Войти";
+.authorization .logout {
+    display: none;
 }
 
-.authorization.logged .login::after {
-    content: "Валентин Петухов";
-    padding-right: 20px;
-}
-
-.authorization.logged .logout::before {
-    content: "Выйти";
+.authorization.logged .logout {
+    display: unset;
+    padding-left: 15px;
     opacity: 0.3;
 }
 
@@ -324,7 +320,7 @@ a:focus, a:hover, a:active {
     right: 0;
 }
 
-.catalog-link:active::after {
+.catalog-link:hover::after {
     animation: rotate 0.2s;
 }
 
@@ -332,7 +328,8 @@ a:focus, a:hover, a:active {
     display: none;
 }
 
-.catalog-menu.reveal {
+.catalog-link:hover ~ .catalog-menu,
+.catalog-menu:hover {
     background-color: var(--special-yellow-light);
 
     width: 1160px;
@@ -354,7 +351,7 @@ a:focus, a:hover, a:active {
     z-index: 1;
 }
 
-.catalog-menu.reveal li {
+.catalog-menu li {
     font-family: 'Open Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -1535,7 +1532,8 @@ a:focus, a:hover, a:active {
 }
 
 .footer-logo {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     margin-bottom: 35px;
 }
 

@@ -1,4 +1,3 @@
-/* Header */
 /* Кнопка поиска */
 const search_button = document.querySelector(".search-button");
 const search_field = document.querySelector(".search-field");
@@ -16,41 +15,6 @@ search_field.addEventListener("blur", function () {
     }
 })
 
-/* Всплывающее меню аталога в header */
-const catalog_link = document.querySelector(".catalog-link");
-const catalog_menu = document.querySelector(".catalog-menu");
-
-catalog_link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    catalog_menu.classList.toggle("reveal");
-});
-
-/* Авторизация */01313
-const authorizations = document.querySelectorAll(".authorization");
-const login_links = document.querySelectorAll(".login");
-const logout_links = document.querySelectorAll(".logout");
-
-for (let login_link of login_links) {
-    login_link.addEventListener("click", function(evt) {
-        if(!authorizations[0].classList.contains("logged")) {
-            evt.preventDefault();
-            for (let authorization of authorizations) {
-                authorization.classList.add("logged");
-            }
-        }
-    })
-}
-
-for (let logout_link of logout_links) {
-    logout_link.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        for (let authorization of authorizations) {
-            authorization.classList.remove("logged");
-        }
-    })
-}
-
-/* Index-sliders */
 /* Основной слайдер */
 const slides = document.querySelectorAll(".slide");
 const slider_controls = document.querySelectorAll(".slider-control");
@@ -120,7 +84,6 @@ credit.addEventListener("click", function () {
     service_buttons[2].classList.add("service-activated");
 });
 
-/* Modal windows */
 /* Работа с модальными окнами */
 const modal_windows = document.querySelectorAll(".modal");
 const close_buttons = document.querySelectorAll(".close-button");
@@ -172,7 +135,7 @@ map_link.addEventListener("click", function (evt) {
     map_popap.classList.remove("hidden");
 });
 
-    /* Функция закрытия всех модальных окон при нажатии на крестик */
+    /* Закрываем все модальные окна при нажатии на крестик */
 const closeModals = () => {
     for (let modal_window of modal_windows) {
         modal_window.classList.add("hidden");
@@ -180,12 +143,10 @@ const closeModals = () => {
     };
 };
 
-    /* Навешиваем обработчики на кнопки закрытия */
 for (let close_button of close_buttons) {
     close_button.addEventListener("click", closeModals);
 };
 
-    /* Закрываем модальные окна, если открыты, по нажатию Esc */
 window.addEventListener("keydown", function (evt) {
     if(evt.keyCode === 27) {
         if (!contact_popap.classList.contains("hidden") || !map_popap.classList.contains("hidden")) {
@@ -195,7 +156,7 @@ window.addEventListener("keydown", function (evt) {
     }
 })
 
-    /* Проверка полей формы обратной связи на валидность */
+    /* Проверка полей на валидность */
 sending_form.addEventListener("submit", function (evt) {
     if (!name_field.value || !mail_field.value || !message_field.value) {
         evt.preventDefault();
@@ -216,7 +177,6 @@ sending_form.addEventListener("submit", function (evt) {
     };
 });
 
-    /* При заполнении поля убираем класс невалидности */
 for (let form_field of form_fields) {
     form_field.addEventListener("input", function() {
         if(form_field.value) {
