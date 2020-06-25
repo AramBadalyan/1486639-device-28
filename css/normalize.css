@@ -308,14 +308,3 @@ details {
 summary {
   display: list-item;
 }
-
-/* For HTML Academy project Device
-   ========================================================================== */
-
-/* 
- * Correct Addres font-style
- */
-
-address {
-    font-style: normal;
-}

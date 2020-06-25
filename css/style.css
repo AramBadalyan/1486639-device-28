@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* Variables */
 :root {
     --basic-black: #000000;
@@ -34,6 +41,7 @@
 /* Global */
 .page {
     height: 100%;
+    min-width: 1200px;
 }
 
 .page-body {
@@ -44,6 +52,8 @@
     padding: 0;
     background-color: var(--basic-white);
     color: var(--basic-black);
+
+    outline: none;
 }
 
 img {
@@ -75,10 +85,9 @@ a:focus, a:hover, a:active {
 /* Header */
 .page-body {
     display: grid;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     align-content: center;
-
-    overflow-x: hidden;
 }
 
 .header {
@@ -94,14 +103,6 @@ a:focus, a:hover, a:active {
     position: absolute;
     padding: 20px 0;
     margin-top: -40px;
-}
-
-.logo:hover {
-    opacity: 0.6;
-}
-
-.logo:active {
-    opacity: 0.3;
 }
 
 .link-line {
@@ -125,13 +126,12 @@ a:focus, a:hover, a:active {
     padding-bottom: 10px;
 }
 
-.link-line a:hover,
-.nav a:hover {
+.header a[href]:hover,
+.header a[href]:focus {
     opacity: 0.6;
 }
 
-.link-line a:active,
-.nav a:active {
+.header a[href]:active {
     opacity: 0.3;
 }
 
@@ -154,7 +154,7 @@ a:focus, a:hover, a:active {
 
 .search::before {
     content: "";
-    top: 18px;
+    top: 17px;
     left: 0;
 
     width: 16px;
@@ -167,7 +167,8 @@ a:focus, a:hover, a:active {
 
 .search label {
     flex-grow: 1;
-    margin-right: 15px;
+    align-self: flex-start;
+    padding-top: 13px;
 }
 
 .search-field {
@@ -176,9 +177,9 @@ a:focus, a:hover, a:active {
     font-size: 15px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.3);
-
+    
     width: calc(100% - 50px);
-    vertical-align: middle;
+    margin-right: 15px;
     margin-left: 36px;
     background-color: transparent;
     border: 0;
@@ -321,7 +322,8 @@ a:focus, a:hover, a:active {
 }
 
 .catalog-link:hover::after {
-    animation: rotate 0.2s;
+    -webkit-animation: rotate 0.2s;
+            animation: rotate 0.2s;
 }
 
 .catalog-menu {
@@ -329,6 +331,7 @@ a:focus, a:hover, a:active {
 }
 
 .catalog-link:hover ~ .catalog-menu,
+.catalog-link:focus ~ .catalog-menu,
 .catalog-menu:hover {
     background-color: var(--special-yellow-light);
 
@@ -405,7 +408,7 @@ a:focus, a:hover, a:active {
 .slider::before {
     content: "";
 
-    width: 100%;
+    width: calc(100% - 20px);
     height: 130px;
     background-color: var(--special-yellow-light);
     border: 0;
@@ -490,7 +493,9 @@ a:focus, a:hover, a:active {
     font-size: 179px;
     line-height: 190px;
     color: var(--basic-white);
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 
     position: absolute;
     top: 0;
@@ -533,7 +538,7 @@ a:focus, a:hover, a:active {
 
 .slider-controls {
     position: absolute;
-    right: 80px;
+    right: 90px;
     bottom: 150px;
 }
 
@@ -565,8 +570,9 @@ a:focus, a:hover, a:active {
 
 /* Популярные разделы магазина */
 .popular {
-    padding: 50px 0;
     margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .categories {
@@ -604,23 +610,26 @@ a:focus, a:hover, a:active {
 }
 
 /* Услуги */
+.service-list {
+    position: relative;
+}
+
 .service-list::before {
     content: '';
 
     background-color: var(--basic-grey-light);
-    width: 9999px;
+    width: 100%;
     height: 288px;
     position: absolute;
     top: 78px;
-    left: -4000px;
     z-index: -5;
 }
 
-.service-list .service {
+.service-slider .service {
     display: none;
 }
 
-.service-list .current {
+.service-slider .current {
     padding-left: 120px;
     display: flex;
 }
@@ -642,16 +651,17 @@ a:focus, a:hover, a:active {
     letter-spacing: 0.1em;
 }
 
-.service-list {
-    padding: 50px 0;
+.service-slider {
     margin-top: 55px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     position: relative;
     display: grid;
     grid-template-columns: 280px 1fr;
 }
 
-.service-list svg {
+.service-slider svg {
     padding: 0;
     margin: 0;
 }
@@ -729,9 +739,9 @@ a:focus, a:hover, a:active {
 
 /* Наши партнеры */
 .partners {
-    padding: 60px 0;
-    margin: 0;
     margin-top: 100px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .partners-list {
@@ -740,7 +750,8 @@ a:focus, a:hover, a:active {
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
 }
 
 .partners-list img {
@@ -748,14 +759,16 @@ a:focus, a:hover, a:active {
 }
 
 .partners-list img:not(:hover) {
-    filter: grayscale(100%);
-    opacity: 20%;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    opacity: 0.2;
 }
 
 /* О нас и Контакты */
 .index-columns {
     min-height: 640px;
-    padding: 25px 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-bottom: 51px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -962,6 +975,7 @@ a:focus, a:hover, a:active {
 /* Сортировка товаров */
 .sort {
     display: grid;
+    grid-template-columns: -webkit-min-content 1fr 50px;
     grid-template-columns: min-content 1fr 50px;
     align-items: center;
 
@@ -1097,7 +1111,9 @@ a:focus, a:hover, a:active {
 
     position: relative;
     display: block;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
     cursor: pointer;
     padding: 10px 0;
     padding-left: 43px;
@@ -1290,7 +1306,8 @@ a:focus, a:hover, a:active {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
 }
 
 .item.new::before {
@@ -1439,7 +1456,9 @@ a:focus, a:hover, a:active {
     line-height: 22px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 
     padding: 10px 25px;
     min-height: 40px;
@@ -1500,25 +1519,35 @@ a:focus, a:hover, a:active {
     padding-top: 45px;
 }
 
-.footer-links a {
+.footer-links .footer-link {
     padding-top: 10px;
     padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-links a:hover,
-.footer-links a:focus {
+.footer-link:hover,
+.footer-link:focus {
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-link:hover svg,
+.footer-link:focus svg {
     opacity: 0.6;
 }
 
-.footer-links a:active {
+.footer-link:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-link:active svg {
     opacity: 0.3;
 }
 
-.footer-links svg {
+.footer-link svg {
     margin-right: 8px;
 }
 
-.footer-links path {
+.footer-link path {
     fill: var(--special-yellow-dark);
 }
 
@@ -1535,6 +1564,7 @@ a:focus, a:hover, a:active {
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 35px;
+    margin-top: -3px;
 }
 
 .footer-logo path,
@@ -1542,18 +1572,22 @@ a:focus, a:hover, a:active {
     fill: var(--special-yellow-dark);
 }
 
-.footer-logo:hover,
-.footer-logo:focus {
+.footer-logo[href]:hover,
+.footer-logo[href]:focus {
     opacity: 0.6;
 }
 
-.footer-logo:active {
+.footer-logo[href]:active {
     opacity: 0.3;
 }
 
 .footer-contacts {
     display: grid;
     grid-template-columns: 300px 1fr 300px;
+}
+
+.footer-contacts address {
+    font-style: normal;
 }
 
 .footer-contacts svg {
@@ -1650,11 +1684,14 @@ a:focus, a:hover, a:active {
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
     z-index: 10;
 
-    animation: opacity-shake 0.5s;
+    -webkit-animation: opacity-shake 0.5s;
+
+            animation: opacity-shake 0.5s;
 }
 
 .modal-error {
-    animation: shake 0.7s;
+    -webkit-animation: shake 0.7s;
+            animation: shake 0.7s;
 }
 
 .close-button {
@@ -1777,6 +1814,30 @@ a:focus, a:hover, a:active {
 }
 
 /* Анимации */
+@-webkit-keyframes opacity-shake {  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate(5deg);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate(-5deg);
+    }
+
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }
 @keyframes opacity-shake {  
     10%,
     30%,
@@ -1802,6 +1863,28 @@ a:focus, a:hover, a:active {
     }
   }
 
+@-webkit-keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }
+
 @keyframes shake {
     0%,
     100% {
@@ -1824,8 +1907,14 @@ a:focus, a:hover, a:active {
     }
   }
 
-  @keyframes rotate {
-      100% {
-          transform: rotate(90deg);
-      }
+@-webkit-keyframes rotate {
+    100% {
+        transform: rotate(90deg);
+    }
+  }
+
+@keyframes rotate {
+    100% {
+        transform: rotate(90deg);
+    }
   }
