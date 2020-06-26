@@ -41,7 +41,7 @@
 /* Global */
 .page {
     height: 100%;
-    min-width: 1200px;
+    min-width: 1180px;
 }
 
 .page-body {
@@ -52,8 +52,6 @@
     padding: 0;
     background-color: var(--basic-white);
     color: var(--basic-black);
-
-    outline: none;
 }
 
 img {
@@ -153,7 +151,7 @@ a:focus, a:hover, a:active {
 }
 
 .search::before {
-    content: "";
+    content: '';
     top: 17px;
     left: 0;
 
@@ -195,6 +193,11 @@ a:focus, a:hover, a:active {
 
 .search-button {
     height: 50px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
 }
 
 .search-button {
@@ -277,7 +280,7 @@ a:focus, a:hover, a:active {
 }
 
 .nav-links > li {
-    margin-right: auto;
+    margin-right: 35px;
 }
 
 .nav-links > li:first-child {
@@ -288,7 +291,7 @@ a:focus, a:hover, a:active {
 }
 
 .nav-links > li:last-child {
-    margin-right: 0;
+    margin-right: -3px;
     margin-left: auto;
 }
 
@@ -307,7 +310,7 @@ a:focus, a:hover, a:active {
 }
 
 .catalog-link::after {
-    content: "";
+    content: '';
 
     width: 22px;
     height: 22px;
@@ -339,14 +342,16 @@ a:focus, a:hover, a:active {
     min-height: 163px;
     margin: 0;
     padding: 0;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-right: 560px;
     padding-left: 60px;
 
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+    grid-template-rows: min-content min-content min-content;
+    -moz-column-gap: 48px;
+         column-gap: 48px;
 
     position: absolute;
     top: auto;
@@ -364,8 +369,12 @@ a:focus, a:hover, a:active {
     letter-spacing: normal;
     text-transform: none;
 
-    margin-top: 20px;
+    margin-top: 15px;
     flex-shrink: 0;
+}
+
+.catalog-menu li:nth-of-type(6) {
+    grid-row-start: 3;
 }
 
 /* Main */
@@ -406,7 +415,7 @@ a:focus, a:hover, a:active {
 }
 
 .slider::before {
-    content: "";
+    content: '';
 
     width: calc(100% - 20px);
     height: 130px;
@@ -440,9 +449,40 @@ a:focus, a:hover, a:active {
     text-align: center;
 }
 
-.slide img {
-    margin: auto;
+/* В угоду PixelPerfect */
+.slide-2 p,
+.slide-3 p {
+    padding-right: 60px;
 }
+
+.feature:nth-of-type(2) {
+    flex-basis: 138px;
+}
+
+.slide-1 img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide-2 img {
+    margin-left: 116px;
+    margin-top: 27px;
+    margin-bottom: -3px;
+}
+
+.slide-3 img {
+    margin-left: 30px;
+    margin-top: 83px;
+}
+
+.categories li:nth-of-type(4) {
+    letter-spacing: 0;
+}
+
+/* Адекватное выравнивание картинок в слайдере, но не проходит по PP */
+/* .slide img {
+    margin: auto;
+}*/
 
 .specification {
     display: flex;
@@ -453,7 +493,7 @@ a:focus, a:hover, a:active {
 }
 
 .specification::before {
-    content: "";
+    content: '';
 
     width: 100px;
     height: 7px;
@@ -512,7 +552,8 @@ a:focus, a:hover, a:active {
 }
 
 .feature {
-    margin-right: 62px;
+    flex-basis: 160px;
+    white-space: nowrap;
 }
 
 .feature dt {
@@ -556,7 +597,7 @@ a:focus, a:hover, a:active {
 }
 
 .slider-controls .current-control::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 2px;
     left: 2px;
@@ -572,7 +613,7 @@ a:focus, a:hover, a:active {
 .popular {
     margin-top: 50px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .categories {
@@ -581,7 +622,7 @@ a:focus, a:hover, a:active {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .categories li {
@@ -591,6 +632,14 @@ a:focus, a:hover, a:active {
     letter-spacing: 0.05em;
 
     flex-basis: 160px;
+    max-width: 160px;
+    flex-shrink: 1;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.categories li:nth-of-type(6n) {
+    margin-right: 0;
 }
 
 .icon-background {
@@ -619,7 +668,7 @@ a:focus, a:hover, a:active {
 
     background-color: var(--basic-grey-light);
     width: 100%;
-    height: 288px;
+    height: 97%;
     position: absolute;
     top: 78px;
     z-index: -5;
@@ -667,7 +716,7 @@ a:focus, a:hover, a:active {
 }
 
 .service-switch::before {
-    content: "";
+    content: '';
 
     width: 7px;
     height: calc(100% + 123px);
@@ -695,6 +744,8 @@ a:focus, a:hover, a:active {
 
 .service-switch .button {
     min-width: 160px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .service-switch .button:active {
@@ -702,7 +753,7 @@ a:focus, a:hover, a:active {
 }
 
 .service-switch .button:active::before {
-    content: "";
+    content: '';
 
     width: 100%;
     height: 100%;
@@ -725,7 +776,7 @@ a:focus, a:hover, a:active {
 .service-activated .button::before,
 .service-activated .button:focus::before,
 .service-activated .button:hover::before {
-    content: "";
+    content: '';
 
     width: 100%;
     height: 100%;
@@ -831,7 +882,7 @@ a:focus, a:hover, a:active {
 }
 
 .transport-companies li:before {
-    content: "";
+    content: '';
 
     width: 8px;
     height: 8px;
@@ -869,12 +920,12 @@ a:focus, a:hover, a:active {
 
 .main-container {
     position: relative;
-    width: 99vw;
+    width: calc(100vw - 15px);
     overflow: hidden;
 }
 
 .main-container::before {
-    content: "";
+    content: '';
 
     background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -888,7 +939,7 @@ a:focus, a:hover, a:active {
 }
 
 .filter::before {
-    content: "";
+    content: '';
 
     background-color: rgba(0, 0, 0, 0.1);
     width: 9999px;
@@ -896,7 +947,7 @@ a:focus, a:hover, a:active {
 
     position: absolute;
     top: 0px;
-    right: 0;
+    right: 2px;
     z-index: -5;
 }
 
@@ -936,7 +987,7 @@ a:focus, a:hover, a:active {
 }
 
 .breadcrumbs li:not(:last-child)::after {
-    content: "";
+    content: '';
 
     width: 12px;
     height: 12px;
@@ -945,7 +996,7 @@ a:focus, a:hover, a:active {
     background-position: center;
     position: absolute;
     top: 5px;
-    right: 10px;
+    right: 13px;
 }
 
 
@@ -967,7 +1018,7 @@ a:focus, a:hover, a:active {
     text-transform: uppercase;
     
     margin: 0;
-    padding-right: 60px;
+    padding-right: 65px;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -998,7 +1049,7 @@ a:focus, a:hover, a:active {
 
 .sort-type {
     padding: 10px;
-    margin: 0 5px;
+    margin-right: 12px;
     cursor: pointer;
     opacity: 0.3;
 }
@@ -1023,12 +1074,13 @@ a:focus, a:hover, a:active {
 .sort-order {
     display: inline-block;
     vertical-align: top;
-    padding: 10px;
     position: relative;
+    width: 18px;
+    height: 20px;
 }
 
 .sort-order::before {
-    content: "";
+    content: '';
 
     width: 20px;
     height: 20px;
@@ -1046,6 +1098,7 @@ a:focus, a:hover, a:active {
 
 .sort-order:first-child {
     transform: rotate(180deg);
+    margin-right: 9px;
 }
 
 .sort-order.active-order::before,
@@ -1116,11 +1169,11 @@ a:focus, a:hover, a:active {
             user-select: none;
     cursor: pointer;
     padding: 10px 0;
-    padding-left: 43px;
+    padding-left: 42px;
 }
 
 .filter-input-checkbox + label::before {
-    content: "";
+    content: '';
 
     width: 24px;
     height: 24px;
@@ -1132,7 +1185,7 @@ a:focus, a:hover, a:active {
 }
 
 .filter-input-checkbox:checked + label::after {
-    content: "";
+    content: '';
 
     width: 14px;
     height: 11px;
@@ -1146,7 +1199,7 @@ a:focus, a:hover, a:active {
 }
 
 .filter-input-radio + label::before {
-    content: "";
+    content: '';
 
     width: 24px;
     height: 24px;
@@ -1159,7 +1212,7 @@ a:focus, a:hover, a:active {
 }
 
 .filter-input-radio:checked + label::after {
-    content: "";
+    content: '';
 
     width: 8px;
     height: 8px;
@@ -1242,23 +1295,21 @@ a:focus, a:hover, a:active {
     left: 126px;
 }
 
-.price-controls {
-    display: flex;
-    justify-content: space-between;
-}
-
 .price-controls label {
     font-weight: 300;
     font-size: 14px;
     line-height: 16px;
+    margin-right: 20px;
 }
 
 .price-controls input {
     font-family: inherit;
     font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
 
     width: 60px;
-    padding-left: 5px;
+    padding-left: 3px;
     border: 0;
     background-color: transparent;
 }
@@ -1296,7 +1347,7 @@ a:focus, a:hover, a:active {
     letter-spacing: 0.05em;
 
     flex-shrink: 0;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .items {
@@ -1311,7 +1362,7 @@ a:focus, a:hover, a:active {
 }
 
 .item.new::before {
-    content: "NEW";
+    content: 'NEW';
     font-weight: 800;
     font-size: 12px;
     line-height: 15px;
@@ -1390,6 +1441,7 @@ a:focus, a:hover, a:active {
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-left: 5px;
 }
 
 .goods-pages li {
@@ -1398,7 +1450,7 @@ a:focus, a:hover, a:active {
 }
 
 .goods-pages a {
-    padding: 0 10px;
+    padding: 0 7px;
     margin: 0 5px;
 }
 
@@ -1468,7 +1520,7 @@ a:focus, a:hover, a:active {
 }
 
 .button::before {
-    content: "";
+    content: '';
 
     width: 100%;
     height: 8px;
@@ -1482,7 +1534,7 @@ a:focus, a:hover, a:active {
 
 .button:hover::before,
 .button:focus::before {
-    content: "";
+    content: '';
 
     width: 100%;
     height: 100%;
@@ -1731,7 +1783,7 @@ a:focus, a:hover, a:active {
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 92px;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
 }
 
 .form-fields {
@@ -1742,7 +1794,7 @@ a:focus, a:hover, a:active {
 
 .form-fields label {
     flex-basis: 360px;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     cursor: pointer;
 }
 
@@ -1750,15 +1802,17 @@ a:focus, a:hover, a:active {
     flex-basis: 100%;
     max-width: 100%;
     min-width: 100%;
-    min-height: 60px;
+    min-height: 167px;
+    max-height: 200px;
     flex-shrink: 0;
 }
 
 .form-fields input,
 .form-fields textarea {
+    font-family: 'Open sans', Arial, sans-serif;
     font-weight: normal;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 19px;
     color: rgba(0, 0, 0, 0.4);
     background-color: #f2f2f2;
 
@@ -1779,13 +1833,14 @@ a:focus, a:hover, a:active {
 .form-fields input:focus,
 .form-fields textarea:focus {
     background-color: var(--basic-white);
-    border: 2px solid var(--special-yellow-light);
+    outline: 2px solid var(--special-yellow-light);
     border: 0;
 }
 
 .form-fields .send-message {
     padding: 0;
     min-width: 200px;
+    margin-top: 17px;
 }
 
 .form-fields .invalid,
@@ -1810,7 +1865,6 @@ a:focus, a:hover, a:active {
     width: 100%;
     height: 400px;
     border: 0;
-    /* allowfullscreen="true" Найти замену атрибута в CSS */
 }
 
 /* Анимации */

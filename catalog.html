@@ -6,7 +6,7 @@
   <title>Моноподы для селфи</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -114,24 +114,24 @@
 
     <div class="main-container">
       <div class="catalog-columns content">
-        <aside class="filter">
+        <section class="filter">
           <h2 class="catalog-action">Фильтр:</h2>
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET">
             <fieldset class="price-range">
               <legend>Стоимость</legend>
               <div class="range-filter">
                 <div class="range-controls">
-                  <div class="scale">
+                  <div class="scale" aria-label="Шкала стоимости товаров">
                     <div class="bar" style="
-                    width: 65%;
+                    width: 63%;
                     margin-left: 0%;
                   "></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0" style="
+                  <div class="toggle toggle-min" aria-label="Минимальная стоимость товара" tabindex="0" style="
                   left: 0%
                 "></div>
-                  <div class="toggle toggle-max" tabindex="0" style="
-                  left: 59%;
+                  <div class="toggle toggle-max" aria-label="Максимальная стоимость товара" tabindex="0" style="
+                  left: 55%;
                 "></div>
                 </div>
                 <div class="price-controls">
@@ -163,7 +163,7 @@
               <label for="color-red" tabindex="0">
                 Красный
               </label>
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="color-pink" name="pink" tabindex="-1" disabled>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="color-pink" name="pink" tabindex="-1">
               <label for="color-pink" tabindex="0">
                 Розовый
               </label>
@@ -184,7 +184,7 @@
               Показать
             </button>
           </form>
-        </aside>
+        </section>
 
         <section class="goods">
           <div class="sort">
@@ -213,7 +213,7 @@
                   height="380">
                 <div  class="item-description">
                   <h2 class="item-title">
-                    <a href="#">Любительская селфи‑палка</a>
+                    <a href="#">Любительская селфи-палка</a>
                   </h2>
                   <span class="item-price">500 руб.</span>
                 </div>
@@ -229,7 +229,7 @@
                   height="380">
                 <div class="item-description">
                   <h2 class="item-title">
-                    <a href="#">Профессиональная селфи‑палка</a>
+                    <a href="#">Профессиональная селфи&#8209;палка</a>
                   </h2>
                   <span class="item-price">1 500 руб.</span>
                 </div>
@@ -245,7 +245,7 @@
                   height="380">
                 <div class="item-description">
                   <h2 class="item-title">
-                    <a href="#">Непотопляемая селфи‑палка</a>
+                    <a href="#">Непотопляемая селфи&#8209;палка</a>
                   </h2>
                   <span class="item-price">2 500 руб.</span>
                 </div>
@@ -261,7 +261,7 @@
                   height="380">
                 <div class="item-description">
                   <h2 class="item-title">
-                    <a href="#">Селфи‑палка «Следуй за мной»</a>
+                    <a href="#">Селфи-палка «Следуй за мной»</a>
                   </h2>
                   <span class="item-price">4 900 руб.</span>
                 </div>
@@ -292,13 +292,13 @@
     <div class="content">
 
       <div class="footer-links">
-        <div class="authorization"> <!-- Класс "logged" управляет отображением имени пользователя и Войти/Выйти -->
+        <div class="authorization logged"> <!-- Класс "logged" управляет отображением имени пользователя и Войти/Выйти -->
           <a class="footer-link" href="#">
             <p class="login">
               <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="black"/>
               </svg>
-              Войти
+              Валентин Петухов
             </p>
           </a>
           <a class="footer-link" href="#">
@@ -415,7 +415,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 
 </body>
 
